@@ -1,0 +1,92 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\alexandra.vescan\\GitProjects\\FORK-EXAMPLES-CSharp-Standalone-AltTrashCat\\EXAMPLES-CSharp-Standalone-AltTrashCat\\alttrashcat-tests-csharp.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\alexandra.vescan\\GitProjects\\FORK-EXAMPLES-CSharp-Standalone-AltTrashCat\\EXAMPLES-CSharp-Standalone-AltTrashCat\\alttrashcat-tests-csharp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\alexandra.vescan\\GitProjects\\FORK-EXAMPLES-CSharp-Standalone-AltTrashCat\\EXAMPLES-CSharp-Standalone-AltTrashCat\\alttrashcat-tests-csharp.csproj",
+        "projectName": "alttrashcat-tests-csharp",
+        "projectPath": "C:\\Users\\alexandra.vescan\\GitProjects\\FORK-EXAMPLES-CSharp-Standalone-AltTrashCat\\EXAMPLES-CSharp-Standalone-AltTrashCat\\alttrashcat-tests-csharp.csproj",
+        "packagesPath": "C:\\Users\\alexandra.vescan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alexandra.vescan\\GitProjects\\FORK-EXAMPLES-CSharp-Standalone-AltTrashCat\\EXAMPLES-CSharp-Standalone-AltTrashCat\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\alexandra.vescan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "targetAlias": "netcoreapp2.2",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "targetAlias": "netcoreapp2.2",
+          "dependencies": {
+            "AltTester-Driver": {
+              "target": "Package",
+              "version": "[1.8.2, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "NUnitTestAdapter": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            },
+            "Unity": {
+              "target": "Package",
+              "version": "[5.11.1, )"
+            },
+            "Unity3d.UnityEngine": {
+              "target": "Package",
+              "version": "[2018.3.5.1, )"
+            },
+            "nunit": {
+              "target": "Package",
+              "version": "[3.12.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -18,10 +18,14 @@ namespace alttrashcat_tests_csharp.pages
         public AltObject MissionButton { get => Driver.WaitForObject(By.NAME, "MissionButton", timeout: 10); }
         public AltObject RunButton { get => Driver.WaitForObject(By.NAME, "StartButton", timeout: 10); }
         public AltObject CharacterName { get => Driver.WaitForObject(By.NAME, "CharName", timeout: 10); }
-        public AltObject ThemeName { get => Driver.WaitForObject(By.NAME, "ThemeZone", timeout: 10); }
+        public AltObject ThemeName { get => Driver.WaitForObject(By.NAME, "ThemeName", timeout: 10); }
+
+        public AltObject ThemeImage {get => Driver.WaitForObject(By.PATH,"/UICamera/Loadout/ThemeZone/Image", timeout:10);}
+
+
         public bool IsDisplayed()
         {
-            if (StoreButton != null && LeaderBoardButton != null && SettingsButton != null && MissionButton != null && RunButton != null && CharacterName != null && ThemeName != null)
+            if (StoreButton != null && LeaderBoardButton != null && SettingsButton != null && MissionButton != null && RunButton != null && CharacterName != null && ThemeName != null && ThemeImage !=null)
                 return true;
             return false;
         }
