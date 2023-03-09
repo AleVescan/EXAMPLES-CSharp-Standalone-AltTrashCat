@@ -13,6 +13,8 @@ namespace alttrashcat_tests_csharp.tests
         GamePlay gamePlayPage;
         PauseOverlayPage pauseOverlayPage;
         GetAnotherChancePage getAnotherChancePage;
+        GameOverScreen gameOverScreen;
+
         [SetUp]
         public void Setup()
         {
@@ -24,6 +26,7 @@ namespace alttrashcat_tests_csharp.tests
             gamePlayPage = new GamePlay(altDriver);
             pauseOverlayPage = new PauseOverlayPage(altDriver);
             getAnotherChancePage = new GetAnotherChancePage(altDriver);
+            gameOverScreen = new GameOverScreen(altDriver);
 
         }
         [Test]
@@ -70,6 +73,29 @@ namespace alttrashcat_tests_csharp.tests
             }
             Assert.True(getAnotherChancePage.IsDisplayed());
         }
+
+        [Test]
+
+        public void TestGameOverScreenIsAceesible()
+        {
+            float timeout = 20;
+            while (timeout > 0)
+            {
+                try
+                {
+                    getAnotherChancePage.IsDisplayed();
+                    break;
+                }
+                catch (Exception)
+                {
+                    timeout -= 1;
+                }
+            }
+            getAnotherChancePage.PressGameOver();
+            Assert.True(gameOverScreen.IsDisplayed());
+        
+        }
+
 
         [TearDown]
         public void Dispose()
