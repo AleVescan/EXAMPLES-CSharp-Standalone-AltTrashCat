@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bFOX5VnQMuB6ZDoqgtELDzwAzZe7/Wo0WLF1/knlYr+Mlt3qN00PBJPdadnanY3TRnH4cOe2bgGhqsCo97SHyQ==",
+  "dgSpecHash": "FZkbzLwLjEnVaI99LPhvs9ABAHIyTUY25Uaw78GbV6oppyRxTBFM+mdpHRDrxB2Y4N+aen+6cmR3rBAoWSxnrg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\alexandra.vescan\\GitProjects\\FORK-EXAMPLES-CSharp-Standalone-AltTrashCat\\EXAMPLES-CSharp-Standalone-AltTrashCat\\TestAlttrashCSharp\\TestAlttrashCSharp.csproj",
+  "projectFilePath": "C:\\GitProjects\\FORK-CSharp-AltTrashCat\\EXAMPLES-CSharp-Standalone-AltTrashCat\\TestAlttrashCSharp\\TestAlttrashCSharp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alexandra.vescan\\.nuget\\packages\\alttester-driver\\1.8.0\\alttester-driver.1.8.0.nupkg.sha512",
     "C:\\Users\\alexandra.vescan\\.nuget\\packages\\microsoft.codecoverage\\15.9.0\\microsoft.codecoverage.15.9.0.nupkg.sha512",

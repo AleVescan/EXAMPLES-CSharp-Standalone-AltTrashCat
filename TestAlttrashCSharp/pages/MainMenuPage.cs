@@ -34,5 +34,15 @@ namespace alttrashcat_tests_csharp.pages
             RunButton.Tap();
         }
 
+        public void PressSettings()
+        {
+            SettingsButton.Tap();
+        }
+
+        public void PressStore()
+        {
+            StoreButton.Tap();
+        }
+
     }
 }

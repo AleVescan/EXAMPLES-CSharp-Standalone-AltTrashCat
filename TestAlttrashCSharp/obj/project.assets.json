@@ -5378,11 +5378,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alexandra.vescan\\GitProjects\\FORK-EXAMPLES-CSharp-Standalone-AltTrashCat\\EXAMPLES-CSharp-Standalone-AltTrashCat\\TestAlttrashCSharp\\TestAlttrashCSharp.csproj",
+      "projectUniqueName": "C:\\GitProjects\\FORK-CSharp-AltTrashCat\\EXAMPLES-CSharp-Standalone-AltTrashCat\\TestAlttrashCSharp\\TestAlttrashCSharp.csproj",
       "projectName": "TestAlttrashCSharp",
-      "projectPath": "C:\\Users\\alexandra.vescan\\GitProjects\\FORK-EXAMPLES-CSharp-Standalone-AltTrashCat\\EXAMPLES-CSharp-Standalone-AltTrashCat\\TestAlttrashCSharp\\TestAlttrashCSharp.csproj",
+      "projectPath": "C:\\GitProjects\\FORK-CSharp-AltTrashCat\\EXAMPLES-CSharp-Standalone-AltTrashCat\\TestAlttrashCSharp\\TestAlttrashCSharp.csproj",
       "packagesPath": "C:\\Users\\alexandra.vescan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alexandra.vescan\\GitProjects\\FORK-EXAMPLES-CSharp-Standalone-AltTrashCat\\EXAMPLES-CSharp-Standalone-AltTrashCat\\TestAlttrashCSharp\\obj\\",
+      "outputPath": "C:\\GitProjects\\FORK-CSharp-AltTrashCat\\EXAMPLES-CSharp-Standalone-AltTrashCat\\TestAlttrashCSharp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\alexandra.vescan\\AppData\\Roaming\\NuGet\\NuGet.Config"

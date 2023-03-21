@@ -12,6 +12,11 @@ namespace alttrashcat_tests_csharp.pages
         public AltObject PremiumButton { get => Driver.WaitForObject(By.NAME, "Premium Button", timeout: 2); }
         public AltObject AvailableCurrency { get => Driver.WaitForObject(By.NAME, "PremiumOwnCount", timeout: 2); }
 
+        // public AltObject NumberOfPremiumCoins {get => Driver.FindObject(By.PATH, " /UICamera/Game/DeathPopup/PremiumDisplay/CurrencyBG").GetText() ;}
+
+        // public AltObject GetAnotherChangeObjectState{ get => Driver.GetComponentProperty<bool>("UnityEngine.UI.Button", "interactable", "UnityEngine.UI");}
+
+
         public bool IsDisplayed()
         {
             if (GameOverButton != null && PremiumButton != null && AvailableCurrency != null)
@@ -26,5 +31,7 @@ namespace alttrashcat_tests_csharp.pages
         {
             PremiumButton.Tap();
         }
+
+        
     }
 }
