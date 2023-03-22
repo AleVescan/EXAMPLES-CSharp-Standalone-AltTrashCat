@@ -46,4 +46,9 @@ namespace alttrashcat_tests_csharp.pages
                 return true;
             return false;
         }
+
+        public void PressStore()
+        {
+            StoreTitle.Tap();
+        }
     }}

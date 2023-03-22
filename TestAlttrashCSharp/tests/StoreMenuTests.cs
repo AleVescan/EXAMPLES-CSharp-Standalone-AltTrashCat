@@ -29,5 +29,21 @@ namespace alttrashcat_tests_csharp.tests
         {
             Assert.True(storePage.StoreIsDisplayed());
         }
+
+        [Test]
+
+        public void TestPressingStoreIncreasesCoins()
+        {
+            string initialPremiumCoinsValue = storePage.PremiumCounter.GetText(); 
+            string initialCoinsValue = storePage.CoinsCounter.GetText();
+
+            storePage.PressStore();
+
+            string updatedPremiumCoinsValue = storePage.PremiumCounter.GetText();  
+            string updatedCoinsValue = storePage.CoinsCounter.GetText();
+
+            Assert.AreNotEqual(initialCoinsValue, updatedCoinsValue);
+            Assert.AreNotEqual(initialPremiumCoinsValue, updatedPremiumCoinsValue);
+        }
     }
 }
