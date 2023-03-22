@@ -9,12 +9,19 @@ namespace alttrashcat_tests_csharp.tests
     {
         AltDriver altDriver;
         StorePage storePage;
+
+        MainMenuPage mainMenuPage;
+
+        SettingsPage settingsPage;
+
         [SetUp]
         public void Setup()
         {
             altDriver = new AltDriver(port: 13000);
             storePage = new StorePage(altDriver);
             storePage.LoadScene();
+            mainMenuPage = new MainMenuPage(altDriver);
+            settingsPage = new SettingsPage(altDriver);
         }
 
         [TearDown]
@@ -45,5 +52,42 @@ namespace alttrashcat_tests_csharp.tests
             Assert.AreNotEqual(initialCoinsValue, updatedCoinsValue);
             Assert.AreNotEqual(initialPremiumCoinsValue, updatedPremiumCoinsValue);
         }
+
+        [Test]
+
+        public void TestBuyButtonsBecomeActiveOnlyWhenEnoughCoins()
+        {
+            mainMenuPage.LoadScene();
+
+            mainMenuPage.PressSettings();
+
+            settingsPage.PressDeleteData();
+        
+            settingsPage.PressYesDeleteData();
+
+            settingsPage.PressClosePopUp();
+
+            mainMenuPage.PressStore();
+ 
+
+           Assert.IsFalse(storePage.BuyButtonsAreEnabled());
+
+           storePage.PressStore(); 
+
+           Thread.Sleep(1000);
+
+           storePage.PressCharactersTab();
+
+           storePage.ReloadItems();
+
+           Thread.Sleep(1000);
+           
+
+           Assert.IsTrue(storePage.BuyButtonsAreEnabled());
+
+
+        }
+
+        
     }
 }

@@ -7,6 +7,8 @@ namespace alttrashcat_tests_csharp.pages
         public MainMenuPage(AltDriver driver) : base(driver)
         {
         }
+        
+        
         public void LoadScene()
         {
             Driver.LoadScene("Main");
@@ -43,6 +45,10 @@ namespace alttrashcat_tests_csharp.pages
         {
             StoreButton.Tap();
         }
+
+       
+
+        
 
     }
 }
