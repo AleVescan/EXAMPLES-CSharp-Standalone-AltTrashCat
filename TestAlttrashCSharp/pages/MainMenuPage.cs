@@ -23,6 +23,11 @@ namespace alttrashcat_tests_csharp.pages
         public AltObject ThemeName { get => Driver.WaitForObject(By.NAME, "ThemeName", timeout: 10); }
 
         public AltObject ThemeImage {get => Driver.WaitForObject(By.PATH,"/UICamera/Loadout/ThemeZone/Image", timeout:10);}
+        public AltObject ButtonRight {get => Driver.WaitForObject(By.PATH,"/UICamera/Loadout/PowerupZone/ButtonRight", timeout:10);}
+        public AltObject ButtonLeft {get => Driver.WaitForObject(By.PATH,"/UICamera/Loadout/PowerupZone/ButtonLeft", timeout:10);}
+
+        public AltObject PowerUpFirstLeft {get => Driver.WaitForObject(By.PATH,"/UICamera/Loadout/PowerupZone/Image/Amount", timeout:10);}
+
 
 
         public bool IsDisplayed()
@@ -46,7 +51,15 @@ namespace alttrashcat_tests_csharp.pages
             StoreButton.Tap();
         }
 
-       
+       public void MovePowerUpLeft()
+       {
+            ButtonLeft.Tap();
+       }
+
+       public void SelectPowerUp()
+       {
+            PowerUpFirstLeft.Tap();
+       }
 
         
 

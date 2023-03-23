@@ -1,4 +1,7 @@
 using Altom.AltDriver;
+using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace alttrashcat_tests_csharp.pages
 {
@@ -28,45 +31,37 @@ namespace alttrashcat_tests_csharp.pages
         public string assemblyName = "UnityEngine.UI";
         public string propertyName = "interactable";
 
+       // public List<> allBuyButtons = new List<>(Driver.FindObjectsWhichContain(By.NAME, "BuyButton"));
+        public List<AltObject> allBuyButtons { get => Driver.FindObjectsWhichContain(By.NAME, "BuyButton");}
+
+         public AltObject BuyMagnetButton {get => Driver.FindObjectsWhichContain(By.NAME, "BuyButton")[0] ;}
+         public AltObject BuyMultiplierButton {get => Driver.FindObjectsWhichContain(By.NAME, "BuyButton")[1] ;}
+         public AltObject BuyInvincibleButton {get => Driver.FindObjectsWhichContain(By.NAME, "BuyButton")[2] ;}
+         public AltObject BuyLifeButton {get => Driver.FindObjectsWhichContain(By.NAME, "BuyButton")[3] ;}
+
+
         public bool BuyButtonsAreEnabled()
         {
         
-            var allBuyButtons = Driver.FindObjectsWhichContain(By.NAME, "BuyButton");
-            var BuyMagnetButton = allBuyButtons[0];
-            var BuyMultiplierButton = allBuyButtons[1];
-            var BuyInvincibleButton = allBuyButtons[2];
-            var BuyLifeButton = allBuyButtons[3];
-
             var BuyMagnetEnabled = BuyMagnetButton.GetComponentProperty<string>(componentName, propertyName, assemblyName);
             var BuyMultiplierEnabled = BuyMultiplierButton.GetComponentProperty<string>(componentName, propertyName, assemblyName);
             var BuyInvincibleEnabled = BuyInvincibleButton.GetComponentProperty<string>(componentName, propertyName, assemblyName);
             var BuyLifeEnabled = BuyLifeButton.GetComponentProperty<string>(componentName, propertyName, assemblyName);
            
         
-            if (BuyMultiplierEnabled == "true" && BuyInvincibleEnabled=="true" && BuyMultiplierEnabled=="true" && BuyLifeEnabled=="true")
+            if (BuyMagnetEnabled == "true" && BuyInvincibleEnabled=="true" && BuyMultiplierEnabled=="true" && BuyLifeEnabled=="true")
                 return true;
             else 
                 return false; 
 
         }
 
-    
+        public void BuyMagnet()
+        {
+   
+            BuyMagnetButton.Tap();
+        }
 
-
-
-       
-
-//        public AltObject BuyMultiplierButton { get => Driver.WaitForObject(By.ID, "-149064");}
-
-         
-
-     //   public AltObject BuyInvincibleButton { get => Driver.WaitForObject(By.ID, "-149200");}
-
-      
-
-        //public AltObject BuyLifeButton {get => Driver.WaitForObject(By.ID, "-149336");}
-
-         
 
          public bool StoreIsDisplayed()
         {
@@ -104,6 +99,11 @@ namespace alttrashcat_tests_csharp.pages
         public void PressCharactersTab()
         {
             CharactersTab.Tap();
+        }
+
+        public void CloseStore()
+        {
+            CloseButton.Tap();
         }
 
       

@@ -5,6 +5,7 @@ namespace alttrashcat_tests_csharp.pages
 {
     public class GameOverScreen : BasePage
     {
+       
         public GameOverScreen(AltDriver driver) : base(driver)
         {
         }

@@ -8,9 +8,11 @@ namespace alttrashcat_tests_csharp.pages
         public GamePlay(AltDriver driver) : base(driver)
         {
         }
-
         public AltObject PauseButton { get => Driver.WaitForObject(By.NAME, "pauseButton", timeout: 2); }
         public AltObject Character { get => Driver.WaitForObject(By.NAME, "PlayerPivot"); }
+        public AltObject InventoryItem { get => Driver.WaitForObject(By.PATH, "/UICamera/Game/WholeUI/Inventory/IconInventory"); }
+        public AltObject PowerUpIcon {get => Driver.WaitForObject(By.NAME, "PowerupIcon");}
+
 
         public bool IsDisplayed()
         {
@@ -20,6 +22,30 @@ namespace alttrashcat_tests_csharp.pages
             }
             return false;
         }
+
+        public bool InventoryItemIsDisplayed()
+        {
+            if (InventoryItem !=null)
+            {
+                return true;
+            }
+            return false;
+        }
+        public void SelectInventoryIcon()
+        {
+            InventoryItem.Tap();
+        }
+
+        public bool PowerUpIconIsDisplayed()
+        {
+             if (InventoryItem !=null)
+            {
+                return true;
+            }
+            return false;
+        }
+        
+
         public void PressPause()
         {
             PauseButton.Tap();

@@ -9,9 +9,8 @@ namespace alttrashcat_tests_csharp.tests
     {
         AltDriver altDriver;
         MainMenuPage mainMenuPage;
-
         StorePage storePage;
-        
+        GamePlay gamePlay;
         SettingsPage settingsPage;
 
         [SetUp]
@@ -19,10 +18,10 @@ namespace alttrashcat_tests_csharp.tests
         {
             altDriver = new AltDriver(port: 13000);
             mainMenuPage = new MainMenuPage(altDriver);
+            gamePlay= new GamePlay(altDriver);
             mainMenuPage.LoadScene();
             settingsPage = new SettingsPage(altDriver);
             storePage = new StorePage(altDriver);
-           
         }
 
         [TearDown]
@@ -48,31 +47,40 @@ namespace alttrashcat_tests_csharp.tests
         
         {
             mainMenuPage.LoadScene();
-
-            //Assert.True(mainMenuPage.IsDisplayed());
-
             mainMenuPage.PressSettings();
-
-           // Assert.True(settingsPage.PopUpisDisplayed());
-
             settingsPage.PressDeleteData();
-        
-
-          //  Assert.True(settingsPage.ConfirmationPopUpisDisplayed());
-
             settingsPage.PressYesDeleteData();
-
-          //  Assert.True(settingsPage.PopUpisDisplayed());
-
             settingsPage.PressClosePopUp();
-
             mainMenuPage.PressStore();
-
-
-            //Assert.True(storePage.StoreIsDisplayed());
-
             Assert.True(storePage.CountersReset());
-         
+        }
+
+        [Test]
+
+        public void TestMagnetIsUsedInGameplay()
+        {
+            mainMenuPage.LoadScene();
+            mainMenuPage.PressStore();
+            bool buttonState = storePage.BuyButtonsAreEnabled();
+            if(buttonState == true)
+                storePage.BuyMagnet();
+            else
+                {storePage.PressStore();
+                 storePage.PressCharactersTab();
+                 storePage.ReloadItems();
+                 storePage.BuyMagnet();
+                }
+
+            storePage.CloseStore();
+
+            mainMenuPage.MovePowerUpLeft();
+            mainMenuPage.PressRun();
+            Assert.IsTrue(gamePlay.InventoryItemIsDisplayed());
+
+            gamePlay.SelectInventoryIcon();
+            Assert.IsTrue(gamePlay.PowerUpIconIsDisplayed());
+
+
         }
     }
 }

@@ -7,6 +7,8 @@ namespace alttrashcat_tests_csharp.tests
 {
     public class StoreMenuTests
     {
+        
+  
         AltDriver altDriver;
         StorePage storePage;
 
@@ -57,7 +59,7 @@ namespace alttrashcat_tests_csharp.tests
 
         public void TestBuyButtonsBecomeActiveOnlyWhenEnoughCoins()
         {
-            mainMenuPage.LoadScene();
+           mainMenuPage.LoadScene();
 
             mainMenuPage.PressSettings();
 
