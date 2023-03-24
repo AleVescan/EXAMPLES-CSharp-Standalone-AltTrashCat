@@ -10,7 +10,7 @@ namespace alttrashcat_tests_csharp.pages
         }
         public AltObject PauseButton { get => Driver.WaitForObject(By.NAME, "pauseButton", timeout: 2); }
         public AltObject Character { get => Driver.WaitForObject(By.NAME, "PlayerPivot"); }
-        public AltObject InventoryItem { get => Driver.WaitForObject(By.PATH, "/UICamera/Game/WholeUI/Inventory/IconInventory"); }
+        public AltObject InventoryItem { get => Driver.WaitForObject(By.NAME, "Inventory"); }
         public AltObject PowerUpIcon {get => Driver.WaitForObject(By.NAME, "PowerupIcon");}
 
 
@@ -38,7 +38,7 @@ namespace alttrashcat_tests_csharp.pages
 
         public bool PowerUpIconIsDisplayed()
         {
-             if (InventoryItem !=null)
+             if (PowerUpIcon !=null)
             {
                 return true;
             }

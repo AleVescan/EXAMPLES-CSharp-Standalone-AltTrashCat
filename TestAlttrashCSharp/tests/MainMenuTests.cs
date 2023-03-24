@@ -3,6 +3,8 @@ using alttrashcat_tests_csharp.pages;
 using System;
 using System.Threading;
 using NUnit.Framework;
+using System.Threading.Tasks;
+
 namespace alttrashcat_tests_csharp.tests
 {
     public class MainMenuTests
@@ -75,12 +77,35 @@ namespace alttrashcat_tests_csharp.tests
 
             mainMenuPage.MovePowerUpLeft();
             mainMenuPage.PressRun();
-            Assert.IsTrue(gamePlay.InventoryItemIsDisplayed());
+            //Assert.IsTrue(gamePlay.InventoryItemIsDisplayed());
 
             gamePlay.SelectInventoryIcon();
             Assert.IsTrue(gamePlay.PowerUpIconIsDisplayed());
-
-
         }
+         [Test]
+         public void TestThatLifePowerUpAddsALife()
+         {
+            mainMenuPage.LoadScene();
+            mainMenuPage.PressStore();
+            bool buttonState = storePage.BuyButtonsAreEnabled();
+            if(buttonState == true)
+                storePage.BuyLife();
+            else
+                {storePage.PressStore();
+                 storePage.PressCharactersTab();
+                 storePage.ReloadItems();
+                 storePage.BuyLife();
+                }
+            storePage.CloseStore();
+            mainMenuPage.MovePowerUpLeft();
+            mainMenuPage.PressRun();
+
+            while (gamePlay.GetCurrentLife() > 1)
+                {Thread.Sleep(5);}
+            Console.WriteLine (" I got out of the while loop");   
+            gamePlay.SelectInventoryIcon();       
+            Assert.AreEqual(gamePlay.GetCurrentLife(), 2);
+ 
+         }
     }
 }

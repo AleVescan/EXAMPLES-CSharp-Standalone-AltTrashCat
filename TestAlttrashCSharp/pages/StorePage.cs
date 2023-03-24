@@ -62,6 +62,11 @@ namespace alttrashcat_tests_csharp.pages
             BuyMagnetButton.Tap();
         }
 
+        public void BuyLife()
+        {
+            BuyLifeButton.Tap();
+        }
+
 
          public bool StoreIsDisplayed()
         {
