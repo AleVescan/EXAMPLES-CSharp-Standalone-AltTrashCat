@@ -107,5 +107,33 @@ namespace alttrashcat_tests_csharp.tests
             Assert.AreEqual(gamePlay.GetCurrentLife(), 2);
  
          }
+
+         [Test]
+
+         public void TestNightTimeThemeisApplied()
+         {
+            mainMenuPage.LoadScene();
+            mainMenuPage.PressStore();
+            bool buttonState = storePage.BuyButtonsAreEnabled();
+            if(buttonState == true)
+                {
+                storePage.OpenThemes();
+                storePage.BuyNightTheme();
+                }
+            else
+                {storePage.PressStore();
+                storePage.OpenThemes();
+                storePage.BuyNightTheme();
+                }
+         
+            storePage.CloseStore();
+            Thread.Sleep(100);
+            mainMenuPage.ChangeTheme();
+            Thread.Sleep(100);
+            mainMenuPage.PressRun();
+            Assert.IsTrue(mainMenuPage.NightLightsAreDisplayed());
+
+
+         }
     }
 }

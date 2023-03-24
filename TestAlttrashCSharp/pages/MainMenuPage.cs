@@ -28,7 +28,9 @@ namespace alttrashcat_tests_csharp.pages
 
         public AltObject PowerUpFirstLeft {get => Driver.WaitForObject(By.PATH,"/UICamera/Loadout/PowerupZone/Image/Amount", timeout:10);}
 
-
+        public AltObject ThemeSelectorRight {get => Driver.WaitForObject(By.PATH,"/UICamera/Loadout/ThemeZone/ThemeSelector/ButtonRight");}
+        //public AltObject ThemeImageName { get => Driver.WaitForObject(By.NAME,"ThemeName").GetText();}
+        public AltObject NightLights {get => Driver.WaitForObject(By.NAME, "LightGlows", timeout:10 );}
 
         public bool IsDisplayed()
         {
@@ -59,6 +61,31 @@ namespace alttrashcat_tests_csharp.pages
        public void SelectPowerUp()
        {
             PowerUpFirstLeft.Tap();
+       }
+
+       public bool ThemeSelectorsDisplayed()
+       {
+        if (ThemeSelectorRight !=null)
+            return true;
+        else 
+            return false;
+       }
+
+       public void ChangeTheme()
+       {
+        if(ThemeSelectorsDisplayed())
+            ThemeSelectorRight.Tap();
+        else 
+            ThemeSelectorRight.Tap();
+        
+       }
+
+       public bool NightLightsAreDisplayed()
+       {
+        if (NightLights != null)
+            return true;
+        else
+            return false;
        }
 
         

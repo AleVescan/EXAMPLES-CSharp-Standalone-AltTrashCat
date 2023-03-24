@@ -39,6 +39,8 @@ namespace alttrashcat_tests_csharp.pages
          public AltObject BuyInvincibleButton {get => Driver.FindObjectsWhichContain(By.NAME, "BuyButton")[2] ;}
          public AltObject BuyLifeButton {get => Driver.FindObjectsWhichContain(By.NAME, "BuyButton")[3] ;}
 
+        public AltObject BuyNightimeButton { get => Driver.FindObjectsWhichContain(By.NAME, "BuyButton")[1];}
+
 
         public bool BuyButtonsAreEnabled()
         {
@@ -58,7 +60,6 @@ namespace alttrashcat_tests_csharp.pages
 
         public void BuyMagnet()
         {
-   
             BuyMagnetButton.Tap();
         }
 
@@ -73,6 +74,11 @@ namespace alttrashcat_tests_csharp.pages
             if (StoreTitle != null && CloseButton != null && ItemsTab != null && CharactersTab != null && AccessoriesTab != null && ThemesTab != null && BuyButton != null && PremiumPlusButton !=null && CoinImage !=null && PremiumCoinImage !=null)
                 return true;
             return false;   
+        }
+
+        public void OpenThemes()
+        {
+            ThemesTab.Tap();
         }
 
 
@@ -109,6 +115,11 @@ namespace alttrashcat_tests_csharp.pages
         public void CloseStore()
         {
             CloseButton.Tap();
+        }
+
+        public void BuyNightTheme()
+        {
+            BuyNightimeButton.Tap();
         }
 
       
