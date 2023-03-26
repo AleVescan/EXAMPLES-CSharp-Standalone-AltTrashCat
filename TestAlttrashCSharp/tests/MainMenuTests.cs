@@ -14,6 +14,7 @@ namespace alttrashcat_tests_csharp.tests
         StorePage storePage;
         GamePlay gamePlay;
         SettingsPage settingsPage;
+        GetAnotherChancePage getAnotherChancePage;
 
         [SetUp]
         public void Setup()
@@ -24,6 +25,7 @@ namespace alttrashcat_tests_csharp.tests
             mainMenuPage.LoadScene();
             settingsPage = new SettingsPage(altDriver);
             storePage = new StorePage(altDriver);
+            getAnotherChancePage = new GetAnotherChancePage(altDriver);
         }
 
         [TearDown]
@@ -133,7 +135,7 @@ namespace alttrashcat_tests_csharp.tests
             mainMenuPage.PressRun();
             Assert.IsTrue(mainMenuPage.NightLightsAreDisplayed());
 
-
          }
+       
     }
 }

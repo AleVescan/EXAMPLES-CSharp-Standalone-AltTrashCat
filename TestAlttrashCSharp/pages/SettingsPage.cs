@@ -54,4 +54,12 @@ namespace alttrashcat_tests_csharp.pages
         ClosePopUpButton.Tap();
     }
 
+    public void DeleteData()
+    {
+        SettingsButton.Tap();
+        DeleteDataButton.Tap();
+        ConfirmYesButton.Tap();
+        ClosePopUpButton.Tap();
+    }
+
     }}

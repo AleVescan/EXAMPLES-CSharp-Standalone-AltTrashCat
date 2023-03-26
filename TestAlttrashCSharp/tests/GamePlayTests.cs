@@ -14,6 +14,7 @@ namespace alttrashcat_tests_csharp.tests
         PauseOverlayPage pauseOverlayPage;
         GetAnotherChancePage getAnotherChancePage;
         GameOverScreen gameOverScreen;
+        SettingsPage settingsPage;
 
 
         [SetUp]
@@ -28,6 +29,7 @@ namespace alttrashcat_tests_csharp.tests
             pauseOverlayPage = new PauseOverlayPage(altDriver);
             getAnotherChancePage = new GetAnotherChancePage(altDriver);
             gameOverScreen = new GameOverScreen(altDriver);
+            settingsPage = new SettingsPage(altDriver);
 
         }
         [Test]
@@ -97,8 +99,34 @@ namespace alttrashcat_tests_csharp.tests
         
         }
 
-       
-       
+         [Test]
+         public void TestGetAnotherChangeDisabledWhenNotEnoughCoins()
+         {
+            gamePlayPage.PressPause();
+            pauseOverlayPage.PressMainMenu();
+            //delete all data 
+            settingsPage.DeleteData();
+            mainMenuPage.PressRun();
+
+            //play game until get another chance is displayed
+            float timeout = 20;
+            while (timeout > 0)
+            {
+                try
+                {
+                    getAnotherChancePage.IsDisplayed();
+                    break;
+                }
+                catch (Exception)
+                {
+                    timeout -= 1;
+                }
+            }
+
+            Assert.IsFalse(getAnotherChancePage.GetAnotherChangeObjectState);
+         }
+
+
 
         [TearDown]
         public void Dispose()

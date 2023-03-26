@@ -14,7 +14,7 @@ namespace alttrashcat_tests_csharp.pages
 
         // public AltObject NumberOfPremiumCoins {get => Driver.FindObject(By.PATH, " /UICamera/Game/DeathPopup/PremiumDisplay/CurrencyBG").GetText() ;}
 
-        // public AltObject GetAnotherChangeObjectState{ get => Driver.GetComponentProperty<bool>("UnityEngine.UI.Button", "interactable", "UnityEngine.UI");}
+         public bool GetAnotherChangeObjectState{ get => PremiumButton.GetComponentProperty<bool>("UnityEngine.UI.Button", "interactable", "UnityEngine.UI");}
 
 
         public bool IsDisplayed()
@@ -31,6 +31,8 @@ namespace alttrashcat_tests_csharp.pages
         {
             PremiumButton.Tap();
         }
+
+    
 
         
     }
