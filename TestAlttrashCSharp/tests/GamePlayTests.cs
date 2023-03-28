@@ -55,7 +55,7 @@ namespace alttrashcat_tests_csharp.tests
         [Test]
         public void TestAvoidingObstacles()
         {
-            gamePlayPage.AvoidObstacles(10);
+            gamePlayPage.AvoidObstacles(30);
             Assert.True(gamePlayPage.GetCurrentLife() > 0);
         }
         [Test]

@@ -136,6 +136,34 @@ namespace alttrashcat_tests_csharp.tests
             Assert.IsTrue(mainMenuPage.NightLightsAreDisplayed());
 
          }
-       
+
+        
+
+        [TestCase("MasterSlider")]
+        [TestCase("MusicSlider")]
+        [TestCase("MasterSFXSlider")]
+
+         public void SliderValuesChangeAsExpected(string sliderName)
+         {
+            //SliderName can be one of the three values : Master, Music,SFX
+            mainMenuPage.LoadScene();
+            mainMenuPage.PressSettings();
+            settingsPage.MoveSliderToStart(sliderName);
+
+           float initialSliderValue= settingsPage.GetSliderValue(sliderName);
+            //slide handle
+            settingsPage.MoveSlider(sliderName);
+
+            float finalSliderValue = settingsPage.GetSliderValue(sliderName);
+
+
+            Console.WriteLine ("intial value is " + initialSliderValue);
+           Assert.AreNotSame(initialSliderValue, finalSliderValue);
+
+        }
+
+
+
+
     }
 }
