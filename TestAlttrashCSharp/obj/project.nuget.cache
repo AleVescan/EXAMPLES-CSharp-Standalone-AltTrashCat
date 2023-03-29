@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "x9pZ/Rar6etAOnoZ/e4LZGFc4DywnkfXHOi9xC8AROP+0xXKeS1zlQdKZdCHHNo3/31pNodb68y3jkOPg6UYeA==",
+  "dgSpecHash": "uiNEMrj/+gT/OtTeq/PwUszwCUfIsW+WpM3ErICiWl/6VFZmqM5PKAZ1o2EaQCiD3izWpscRO3gbMaGNgbBQpA==",
   "success": true,
-  "projectFilePath": "c:\\GitProjects\\FORK-CSharp-AltTrashCat\\EXAMPLES-CSharp-Standalone-AltTrashCat\\TestAlttrashCSharp\\TestAlttrashCSharp.csproj",
+  "projectFilePath": "C:\\GitProjects\\FORK-CSharp-AltTrashCat\\EXAMPLES-CSharp-Standalone-AltTrashCat\\TestAlttrashCSharp\\TestAlttrashCSharp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alexandra.vescan\\.nuget\\packages\\alttester-driver\\1.8.0\\alttester-driver.1.8.0.nupkg.sha512",
     "C:\\Users\\alexandra.vescan\\.nuget\\packages\\microsoft.codecoverage\\15.9.0\\microsoft.codecoverage.15.9.0.nupkg.sha512",
@@ -21,6 +21,7 @@
     "C:\\Users\\alexandra.vescan\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\alexandra.vescan\\.nuget\\packages\\nlog\\4.7.9\\nlog.4.7.9.nupkg.sha512",
     "C:\\Users\\alexandra.vescan\\.nuget\\packages\\nunit\\3.12.0\\nunit.3.12.0.nupkg.sha512",
+    "C:\\Users\\alexandra.vescan\\.nuget\\packages\\nunit.consolerunner\\3.16.3\\nunit.consolerunner.3.16.3.nupkg.sha512",
     "C:\\Users\\alexandra.vescan\\.nuget\\packages\\nunit3testadapter\\3.9.0\\nunit3testadapter.3.9.0.nupkg.sha512",
     "C:\\Users\\alexandra.vescan\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\alexandra.vescan\\.nuget\\packages\\system.appcontext\\4.1.0\\system.appcontext.4.1.0.nupkg.sha512",
@@ -80,9 +81,9 @@
     "C:\\Users\\alexandra.vescan\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.3.0\\system.xml.xpath.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\alexandra.vescan\\.nuget\\packages\\unity3d.unityengine\\2018.3.5.1\\unity3d.unityengine.2018.3.5.1.nupkg.sha512",
     "C:\\Users\\alexandra.vescan\\.nuget\\packages\\websocketsharp\\1.0.3-rc11\\websocketsharp.1.0.3-rc11.nupkg.sha512",
+    "C:\\Users\\alexandra.vescan\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
     "C:\\Users\\alexandra.vescan\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\alexandra.vescan\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\alexandra.vescan\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
+    "C:\\Users\\alexandra.vescan\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512"
   ],
   "logs": [
     {

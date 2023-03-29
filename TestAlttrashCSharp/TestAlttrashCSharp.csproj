@@ -9,6 +9,7 @@
   <ItemGroup>
     <PackageReference Include="AltTester-Driver" Version="1.8.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
+    <PackageReference Include="NUnit.ConsoleRunner" Version="3.16.3" />
     <PackageReference Include="Unity3D.UnityEngine" Version="2018.3.5.1" />
     <PackageReference Include="nunit" Version="3.12.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.9.0" />
