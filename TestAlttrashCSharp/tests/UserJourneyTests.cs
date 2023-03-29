@@ -31,7 +31,8 @@ namespace alttrashcat_tests_csharp.tests
             gameOverScreen = new GameOverScreen(altDriver);
             settingsPage = new SettingsPage(altDriver);
             startPage = new StartPage(altDriver);
-            storePage = new StorePage(altDriver);
+            storePage = new StorePage(altDriver); 
+            mainMenuPage.LoadScene();
 
         }
 
@@ -39,10 +40,10 @@ namespace alttrashcat_tests_csharp.tests
 
         public void UserJourneyPlayandPause()
         {
-        Assert.Multiple(() =>
+             Assert.Multiple(() =>
         {
            //User opens the game
-            mainMenuPage.LoadScene();
+           // mainMenuPage.LoadScene();
             mainMenuPage.PressRun();
             Assert.True(gamePlay.IsDisplayed());
             gamePlay.AvoidObstacles(5);
@@ -69,44 +70,35 @@ namespace alttrashcat_tests_csharp.tests
             getAnotherChancePage.PressGameOver();
             Assert.True(gameOverScreen.IsDisplayed());
             });
-        
          }
 
 
-        //User opens the game 
-        //Delete all data 
-        //Run to avoid obstacles 
-        //Pause 
-        // Continue running until you die
 
-        //User opens the game
-        //Add money in account 
-        //Buy all the available options once 
-        //Go to main menu and customize the play 
-        //Run until you die 
-
-        //user opens the game
-        //Run until you die then get another chance 
-          //Run until you die again 
     
         [Test]
         public void UserJourneyBuyItems()
         {
             Assert.Multiple(() =>
         {
-           mainMenuPage.LoadScene();
+
+            //delete current game data
+          // mainMenuPage.LoadScene();
            mainMenuPage.PressSettings();
            settingsPage.PressDeleteData();
            settingsPage.PressYesDeleteData();
            settingsPage.PressClosePopUp();
            mainMenuPage.PressStore();
+           // verify if buttons are disabled when no money
            Assert.IsFalse(storePage.BuyButtonsAreEnabled());
            storePage.PressStore(); 
            Thread.Sleep(1000);
            storePage.PressCharactersTab();
            storePage.ReloadItems();
            Thread.Sleep(1000); 
+           //get coins by pressing Store and verify buttons get enabled 
            Assert.IsTrue(storePage.BuyButtonsAreEnabled());
+
+           //buy magnet and night theme
            storePage.BuyMagnet();
            storePage.OpenThemes();
             storePage.BuyNightTheme();
@@ -114,7 +106,7 @@ namespace alttrashcat_tests_csharp.tests
             mainMenuPage.MovePowerUpLeft();
             mainMenuPage.ChangeTheme();
             Thread.Sleep(100);
-
+            //verify bought items are available in game
             mainMenuPage.PressRun();
             Assert.IsTrue(gamePlay.InventoryItemIsDisplayed());
 
@@ -123,7 +115,78 @@ namespace alttrashcat_tests_csharp.tests
             Assert.IsTrue(gamePlay.PowerUpIconIsDisplayed());
 
          });
-
         }
-    }
+
+         [Test]
+
+         public void UserJourneyReviveAndGetASecondChance()
+        {
+            Assert.Multiple(() =>
+            {
+                mainMenuPage.PressSettings();
+           settingsPage.PressDeleteData();
+           settingsPage.PressYesDeleteData();
+           settingsPage.PressClosePopUp();
+           mainMenuPage.PressStore();
+           // verify if buttons are disabled when no money
+           Assert.IsFalse(storePage.BuyButtonsAreEnabled());
+           storePage.PressStore(); 
+           Thread.Sleep(1000);
+           storePage.PressCharactersTab();
+           storePage.ReloadItems();
+           Thread.Sleep(1000); 
+           //get coins by pressing Store and verify buttons get enabled 
+           Assert.IsTrue(storePage.BuyButtonsAreEnabled());
+           storePage.BuyLife();
+           storePage.CloseStore();
+            mainMenuPage.MovePowerUpLeft();
+            mainMenuPage.PressRun();
+
+            while (gamePlay.GetCurrentLife() > 1)
+                {Thread.Sleep(5);}
+             
+            gamePlay.SelectInventoryIcon();       
+            Assert.AreEqual(gamePlay.GetCurrentLife(), 2);
+            float timeout = 20;
+            while (timeout > 0)
+            {
+                try
+                {
+                    getAnotherChancePage.IsDisplayed();
+                    break;
+                }
+                catch (Exception)
+                {
+                    timeout -= 1;
+                }
+            }
+            Assert.True(getAnotherChancePage.IsDisplayed());
+            getAnotherChancePage.PressPremiumButton();
+            while (timeout > 0)
+            {
+                try
+                {
+                    getAnotherChancePage.IsDisplayed();
+                    break;
+                }
+                catch (Exception)
+                {
+                    timeout -= 1;
+                }
+            }
+
+            Assert.True(gameOverScreen.IsDisplayed());
+
+            }
+            );
+        }
+                [TearDown]
+        public void Dispose()
+        {
+            altDriver.Stop();
+            Thread.Sleep(1000);
+        }
+            
+        }
+    
 }
