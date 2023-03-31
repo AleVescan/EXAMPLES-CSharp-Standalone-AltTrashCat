@@ -83,10 +83,7 @@ namespace alttrashcat_tests_csharp.tests
 
             //delete current game data
           // mainMenuPage.LoadScene();
-           mainMenuPage.PressSettings();
-           settingsPage.PressDeleteData();
-           settingsPage.PressYesDeleteData();
-           settingsPage.PressClosePopUp();
+           settingsPage.DeleteData();
            mainMenuPage.PressStore();
            // verify if buttons are disabled when no money
            Assert.IsFalse(storePage.BuyButtonsAreEnabled());
@@ -110,7 +107,7 @@ namespace alttrashcat_tests_csharp.tests
             mainMenuPage.PressRun();
             Assert.IsTrue(gamePlay.InventoryItemIsDisplayed());
 
-            Assert.IsTrue(mainMenuPage.NightLightsAreDisplayed());
+            Assert.IsTrue(gamePlay.NightLightsAreDisplayed());
             gamePlay.SelectInventoryIcon();
             Assert.IsTrue(gamePlay.PowerUpIconIsDisplayed());
 
@@ -121,12 +118,9 @@ namespace alttrashcat_tests_csharp.tests
 
          public void UserJourneyReviveAndGetASecondChance()
         {
-            Assert.Multiple(() =>
-            {
-                mainMenuPage.PressSettings();
-           settingsPage.PressDeleteData();
-           settingsPage.PressYesDeleteData();
-           settingsPage.PressClosePopUp();
+        Assert.Multiple(() =>
+        {
+           settingsPage.DeleteData();
            mainMenuPage.PressStore();
            // verify if buttons are disabled when no money
            Assert.IsFalse(storePage.BuyButtonsAreEnabled());

@@ -100,6 +100,8 @@ namespace alttrashcat_tests_csharp.tests
         }
 
          [Test]
+        
+         
          public void TestGetAnotherChangeDisabledWhenNotEnoughCoins()
          {
             gamePlayPage.PressPause();

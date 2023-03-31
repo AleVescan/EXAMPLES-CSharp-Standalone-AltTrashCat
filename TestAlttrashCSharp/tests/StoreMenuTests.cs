@@ -45,9 +45,7 @@ namespace alttrashcat_tests_csharp.tests
         {
             string initialPremiumCoinsValue = storePage.PremiumCounter.GetText(); 
             string initialCoinsValue = storePage.CoinsCounter.GetText();
-
             storePage.PressStore();
-
             string updatedPremiumCoinsValue = storePage.PremiumCounter.GetText();  
             string updatedCoinsValue = storePage.CoinsCounter.GetText();
 
@@ -60,35 +58,18 @@ namespace alttrashcat_tests_csharp.tests
         public void TestBuyButtonsBecomeActiveOnlyWhenEnoughCoins()
         {
            mainMenuPage.LoadScene();
-
-            mainMenuPage.PressSettings();
-
-            settingsPage.PressDeleteData();
-        
-            settingsPage.PressYesDeleteData();
-
-            settingsPage.PressClosePopUp();
-
-            mainMenuPage.PressStore();
- 
-
+           settingsPage.DeleteData();
+           mainMenuPage.PressStore();          
            Assert.IsFalse(storePage.BuyButtonsAreEnabled());
-
            storePage.PressStore(); 
-
            Thread.Sleep(1000);
-
            storePage.PressCharactersTab();
-
            storePage.ReloadItems();
-
            Thread.Sleep(1000);
-           
-
+        
            Assert.IsTrue(storePage.BuyButtonsAreEnabled());
-
-
         }
+
 
         
     }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\GitProjects\\FORK-CSharp-AltTrashCat\\EXAMPLES-CSharp-Standalone-AltTrashCat\\TestAlttrashCSharp\\TestAlttrashCSharp.csproj": {}
+    "C:\\GitProjects\\FORK-CSharp-AltTrashCat\\EXAMPLES-CSharp-Standalone-AltTrashCat\\TestAlttrashCSharp\\TestAlttrashCSharp.csproj": {}
   },
   "projects": {
-    "c:\\GitProjects\\FORK-CSharp-AltTrashCat\\EXAMPLES-CSharp-Standalone-AltTrashCat\\TestAlttrashCSharp\\TestAlttrashCSharp.csproj": {
+    "C:\\GitProjects\\FORK-CSharp-AltTrashCat\\EXAMPLES-CSharp-Standalone-AltTrashCat\\TestAlttrashCSharp\\TestAlttrashCSharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\GitProjects\\FORK-CSharp-AltTrashCat\\EXAMPLES-CSharp-Standalone-AltTrashCat\\TestAlttrashCSharp\\TestAlttrashCSharp.csproj",
+        "projectUniqueName": "C:\\GitProjects\\FORK-CSharp-AltTrashCat\\EXAMPLES-CSharp-Standalone-AltTrashCat\\TestAlttrashCSharp\\TestAlttrashCSharp.csproj",
         "projectName": "TestAlttrashCSharp",
-        "projectPath": "c:\\GitProjects\\FORK-CSharp-AltTrashCat\\EXAMPLES-CSharp-Standalone-AltTrashCat\\TestAlttrashCSharp\\TestAlttrashCSharp.csproj",
+        "projectPath": "C:\\GitProjects\\FORK-CSharp-AltTrashCat\\EXAMPLES-CSharp-Standalone-AltTrashCat\\TestAlttrashCSharp\\TestAlttrashCSharp.csproj",
         "packagesPath": "C:\\Users\\alexandra.vescan\\.nuget\\packages\\",
-        "outputPath": "c:\\GitProjects\\FORK-CSharp-AltTrashCat\\EXAMPLES-CSharp-Standalone-AltTrashCat\\TestAlttrashCSharp\\obj\\",
+        "outputPath": "C:\\GitProjects\\FORK-CSharp-AltTrashCat\\EXAMPLES-CSharp-Standalone-AltTrashCat\\TestAlttrashCSharp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\alexandra.vescan\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -46,13 +46,21 @@
               "target": "Package",
               "version": "[15.9.0, )"
             },
+            "NUnit.Allure": {
+              "target": "Package",
+              "version": "[1.2.1.1, )"
+            },
+            "NUnit.Console": {
+              "target": "Package",
+              "version": "[3.16.3, )"
+            },
             "NUnit.ConsoleRunner": {
               "target": "Package",
               "version": "[3.16.3, )"
             },
             "NUnit3TestAdapter": {
               "target": "Package",
-              "version": "[3.9.0, )"
+              "version": "[4.4.2, )"
             },
             "Unity3D.UnityEngine": {
               "target": "Package",

@@ -22,10 +22,10 @@ namespace alttrashcat_tests_csharp.tests
             altDriver = new AltDriver(port: 13000);
             mainMenuPage = new MainMenuPage(altDriver);
             gamePlay= new GamePlay(altDriver);
-            mainMenuPage.LoadScene();
             settingsPage = new SettingsPage(altDriver);
             storePage = new StorePage(altDriver);
             getAnotherChancePage = new GetAnotherChancePage(altDriver);
+             mainMenuPage.LoadScene();
         }
 
         [TearDown]
@@ -51,10 +51,7 @@ namespace alttrashcat_tests_csharp.tests
         
         {
             mainMenuPage.LoadScene();
-            mainMenuPage.PressSettings();
-            settingsPage.PressDeleteData();
-            settingsPage.PressYesDeleteData();
-            settingsPage.PressClosePopUp();
+            settingsPage.DeleteData();
             mainMenuPage.PressStore();
             Assert.True(storePage.CountersReset());
         }
@@ -79,8 +76,6 @@ namespace alttrashcat_tests_csharp.tests
 
             mainMenuPage.MovePowerUpLeft();
             mainMenuPage.PressRun();
-            //Assert.IsTrue(gamePlay.InventoryItemIsDisplayed());
-
             gamePlay.SelectInventoryIcon();
             Assert.IsTrue(gamePlay.PowerUpIconIsDisplayed());
         }
@@ -104,10 +99,52 @@ namespace alttrashcat_tests_csharp.tests
 
             while (gamePlay.GetCurrentLife() > 1)
                 {Thread.Sleep(5);}
-            Console.WriteLine (" I got out of the while loop");   
             gamePlay.SelectInventoryIcon();       
             Assert.AreEqual(gamePlay.GetCurrentLife(), 2);
  
+         }
+
+         [Test]
+
+         public void TestTheUserCanPlayWithRaccoon()
+         {
+            mainMenuPage.LoadScene();
+            settingsPage.DeleteData();
+            mainMenuPage.PressStore();
+            storePage.PressStore();
+            storePage.PressCharactersTab();
+            storePage.BuyRubbishRaccon();
+            storePage.CloseStore();
+            mainMenuPage.ChangeCharacter();
+            mainMenuPage.PressRun();
+            Thread.Sleep(20);
+            Assert.IsTrue(gamePlay.RacconIsDisplayed());
+         }
+
+         [Test]
+
+         public void TestThatTheCharacterCanWearAccessories()
+         {
+
+            mainMenuPage.LoadScene();
+            settingsPage.DeleteData();
+            mainMenuPage.PressStore();
+            storePage.PressStore();
+            storePage.PressAccessoriesTab();
+            storePage.BuyAccessoryItems();
+            storePage.CloseStore();
+           // mainMenuPage.ChangeCharacter();
+            mainMenuPage.ChangeAccessory();
+            mainMenuPage.PressRun();
+            Thread.Sleep(10);
+            Assert.IsTrue(gamePlay.ConstructionGearIsDIsplayed());
+
+        
+
+
+
+
+
          }
 
          [Test]
@@ -133,7 +170,7 @@ namespace alttrashcat_tests_csharp.tests
             mainMenuPage.ChangeTheme();
             Thread.Sleep(100);
             mainMenuPage.PressRun();
-            Assert.IsTrue(mainMenuPage.NightLightsAreDisplayed());
+            Assert.IsTrue(gamePlay.NightLightsAreDisplayed());
 
          }
 

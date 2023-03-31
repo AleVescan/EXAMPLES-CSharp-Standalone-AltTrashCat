@@ -106,8 +106,6 @@ C:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\Te
 C:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\TestAlttrashCSharp\obj\Debug\netcoreapp3.1\TestAlttrashCSharp.dll
 C:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\TestAlttrashCSharp\obj\Debug\netcoreapp3.1\TestAlttrashCSharp.pdb
 C:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\TestAlttrashCSharp\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.dll
-C:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\TestAlttrashCSharp\bin\Debug\netcoreapp3.1\nunit.engine.netstandard.dll
-C:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\TestAlttrashCSharp\bin\Debug\netcoreapp3.1\Mono.Cecil.dll
 C:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\TestAlttrashCSharp\bin\Debug\netcoreapp3.1\TestAlttrashCSharp.deps.json
 C:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\TestAlttrashCSharp\bin\Debug\netcoreapp3.1\TestAlttrashCSharp.runtimeconfig.json
 C:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\TestAlttrashCSharp\bin\Debug\netcoreapp3.1\TestAlttrashCSharp.runtimeconfig.dev.json
@@ -115,7 +113,6 @@ C:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\Te
 C:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\TestAlttrashCSharp\bin\Debug\netcoreapp3.1\TestAlttrashCSharp.pdb
 C:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\TestAlttrashCSharp\bin\Debug\netcoreapp3.1\AltDriver.dll
 C:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\TestAlttrashCSharp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.CodeCoverage.Shim.dll
-C:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\TestAlttrashCSharp\bin\Debug\netcoreapp3.1\Microsoft.DotNet.InternalAbstractions.dll
 C:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\TestAlttrashCSharp\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
 C:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\TestAlttrashCSharp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
 C:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\TestAlttrashCSharp\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.CoreUtilities.dll
@@ -198,3 +195,12 @@ C:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\Te
 C:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\TestAlttrashCSharp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
 C:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\TestAlttrashCSharp\obj\Debug\netcoreapp3.1\TestAlttrashCSharp.csproj.CopyComplete
 C:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\TestAlttrashCSharp\obj\Debug\netcoreapp3.1\TestAlttrashCSharp.genruntimeconfig.cache
+c:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\TestAlttrashCSharp\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.pdb
+c:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\TestAlttrashCSharp\bin\Debug\netcoreapp3.1\nunit.engine.dll
+c:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\TestAlttrashCSharp\bin\Debug\netcoreapp3.1\nunit.engine.api.dll
+c:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\TestAlttrashCSharp\bin\Debug\netcoreapp3.1\nunit.engine.core.dll
+c:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\TestAlttrashCSharp\bin\Debug\netcoreapp3.1\testcentric.engine.metadata.dll
+c:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\TestAlttrashCSharp\bin\Debug\netcoreapp3.1\Allure.Commons.dll
+c:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\TestAlttrashCSharp\bin\Debug\netcoreapp3.1\AspectInjector.Broker.dll
+c:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\TestAlttrashCSharp\bin\Debug\netcoreapp3.1\MimeTypesMap.dll
+c:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\TestAlttrashCSharp\bin\Debug\netcoreapp3.1\NUnit.Allure.dll

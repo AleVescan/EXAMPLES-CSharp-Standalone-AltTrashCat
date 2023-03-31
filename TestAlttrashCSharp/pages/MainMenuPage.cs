@@ -25,12 +25,15 @@ namespace alttrashcat_tests_csharp.pages
         public AltObject ThemeImage {get => Driver.WaitForObject(By.PATH,"/UICamera/Loadout/ThemeZone/Image", timeout:10);}
         public AltObject ButtonRight {get => Driver.WaitForObject(By.PATH,"/UICamera/Loadout/PowerupZone/ButtonRight", timeout:10);}
         public AltObject ButtonLeft {get => Driver.WaitForObject(By.PATH,"/UICamera/Loadout/PowerupZone/ButtonLeft", timeout:10);}
+        public AltObject CharzoneButtonRight {get => Driver.WaitForObject(By.PATH,"/UICamera/Loadout/CharZone/CharName/CharSelector/ButtonRight", timeout:10);}
 
         public AltObject PowerUpFirstLeft {get => Driver.WaitForObject(By.PATH,"/UICamera/Loadout/PowerupZone/Image/Amount", timeout:10);}
 
         public AltObject ThemeSelectorRight {get => Driver.WaitForObject(By.PATH,"/UICamera/Loadout/ThemeZone/ThemeSelector/ButtonRight");}
+
+        public AltObject AccessoriesSelectorDown {get => Driver.WaitForObject(By.PATH,"/UICamera/Loadout/AccessoriesSelector/ButtonBottom");}
         //public AltObject ThemeImageName { get => Driver.WaitForObject(By.NAME,"ThemeName").GetText();}
-        public AltObject NightLights {get => Driver.WaitForObject(By.NAME, "LightGlows", timeout:10 );}
+        
 
         public bool IsDisplayed()
         {
@@ -77,16 +80,19 @@ namespace alttrashcat_tests_csharp.pages
             ThemeSelectorRight.Tap();
         else 
             ThemeSelectorRight.Tap();
-        
        }
 
-       public bool NightLightsAreDisplayed()
+       public void ChangeCharacter()
        {
-        if (NightLights != null)
-            return true;
-        else
-            return false;
+        CharzoneButtonRight.Tap();
        }
+
+       public void ChangeAccessory()
+       {
+        AccessoriesSelectorDown.Tap();
+       }
+
+      
 
         
 

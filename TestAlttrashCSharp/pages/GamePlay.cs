@@ -12,6 +12,10 @@ namespace alttrashcat_tests_csharp.pages
         public AltObject Character { get => Driver.WaitForObject(By.NAME, "PlayerPivot"); }
         public AltObject InventoryItem { get => Driver.WaitForObject(By.NAME, "Inventory"); }
         public AltObject PowerUpIcon {get => Driver.WaitForObject(By.NAME, "PowerupIcon");}
+        public AltObject RacconMesh {get => Driver.WaitForObject(By.PATH, "/PlayerPivot/CharacterSlot/character(Clone)/RacoonMesh");}
+        public AltObject NightLights {get => Driver.WaitForObject(By.NAME, "LightGlows", timeout:10 );}
+        public AltObject RacconConstructionGear {get => Driver.WaitForObject(By.PATH, "/PlayerPivot/CharacterSlot/character(Clone)/ConstructionGearMesh");}
+
 
 
         public bool IsDisplayed()
@@ -44,7 +48,31 @@ namespace alttrashcat_tests_csharp.pages
             }
             return false;
         }
-        
+
+        public bool RacconIsDisplayed()
+        {
+            if (RacconMesh !=null)
+            {
+                return true;
+            }
+            return false;
+
+        }
+         public bool NightLightsAreDisplayed()
+       {
+        if (NightLights != null)
+            return true;
+        else
+            return false;
+       }
+
+       public bool ConstructionGearIsDIsplayed()
+       {
+        if (RacconConstructionGear != null)
+            return true;
+        else
+            return false;
+       }
 
         public void PressPause()
         {

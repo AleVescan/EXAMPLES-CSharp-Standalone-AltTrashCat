@@ -33,13 +33,22 @@ namespace alttrashcat_tests_csharp.pages
 
        // public List<> allBuyButtons = new List<>(Driver.FindObjectsWhichContain(By.NAME, "BuyButton"));
         public List<AltObject> allBuyButtons { get => Driver.FindObjectsWhichContain(By.NAME, "BuyButton");}
-
          public AltObject BuyMagnetButton {get => Driver.FindObjectsWhichContain(By.NAME, "BuyButton")[0] ;}
          public AltObject BuyMultiplierButton {get => Driver.FindObjectsWhichContain(By.NAME, "BuyButton")[1] ;}
          public AltObject BuyInvincibleButton {get => Driver.FindObjectsWhichContain(By.NAME, "BuyButton")[2] ;}
          public AltObject BuyLifeButton {get => Driver.FindObjectsWhichContain(By.NAME, "BuyButton")[3] ;}
-
         public AltObject BuyNightimeButton { get => Driver.FindObjectsWhichContain(By.NAME, "BuyButton")[1];}
+        public AltObject PremiumCounter {get => Driver.WaitForObject(By.PATH,"/Canvas/Background/Premium/PremiumCounter");}
+        public string PremiumCoinsValue { get =>PremiumCounter.GetText(); }
+        public AltObject CoinsCounter {get => Driver.WaitForObject(By.PATH,"/Canvas/Background/Coin/CoinsCounter");}
+        public string CoinsCounterValue { get =>CoinsCounter.GetText(); }
+        public AltObject BuyRaccoon {get => Driver.FindObjectsWhichContain(By.NAME, "BuyButton")[1] ;}
+
+        public AltObject BuySafetyButton {get => Driver.FindObjectsWhichContain(By.NAME, "BuyButton")[0] ;}
+        public AltObject BuyPartyHatButton {get => Driver.FindObjectsWhichContain(By.NAME, "BuyButton")[1] ;}
+        public AltObject BuySmartHatButton {get => Driver.FindObjectsWhichContain(By.NAME, "BuyButton")[2] ;}
+        public AltObject BuyRacoonSafetyButton {get => Driver.FindObjectsWhichContain(By.NAME, "BuyButton")[3] ;}
+    
 
 
         public bool BuyButtonsAreEnabled()
@@ -67,60 +76,61 @@ namespace alttrashcat_tests_csharp.pages
         {
             BuyLifeButton.Tap();
         }
-
-
          public bool StoreIsDisplayed()
         {
             if (StoreTitle != null && CloseButton != null && ItemsTab != null && CharactersTab != null && AccessoriesTab != null && ThemesTab != null && BuyButton != null && PremiumPlusButton !=null && CoinImage !=null && PremiumCoinImage !=null)
                 return true;
             return false;   
         }
-
         public void OpenThemes()
         {
             ThemesTab.Tap();
         }
-
-
-        public AltObject PremiumCounter {get => Driver.WaitForObject(By.PATH,"/Canvas/Background/Premium/PremiumCounter");}
-
-        public string PremiumCoinsValue { get =>PremiumCounter.GetText(); }
-
-        public AltObject CoinsCounter {get => Driver.WaitForObject(By.PATH,"/Canvas/Background/Coin/CoinsCounter");}
-
-        public string CoinsCounterValue { get =>CoinsCounter.GetText(); }
-
         public bool CountersReset()
         {
             if (CoinsCounterValue == "0" && PremiumCoinsValue == "0")
                 return true;
             return false;
         }
-
         public void PressStore()
         {
             StoreTitle.Tap();
         }
-
         public void ReloadItems()
         {
             ItemsTab.Tap();
         }
-
         public void PressCharactersTab()
         {
             CharactersTab.Tap();
         }
-
+        public void BuyRubbishRaccon()
+        {
+            CharactersTab.Tap();
+            BuyRaccoon.Tap();
+        }
         public void CloseStore()
         {
             CloseButton.Tap();
         }
-
         public void BuyNightTheme()
         {
             BuyNightimeButton.Tap();
         }
 
-      
-    }}
+        public void PressAccessoriesTab()
+        {
+            AccessoriesTab.Tap();
+        }
+        public void BuyAccessoryItems()
+        {
+           BuySafetyButton.Tap();
+           BuyPartyHatButton.Tap();
+           BuySmartHatButton.Tap();
+           BuyRacoonSafetyButton.Tap();
+            
+        }
+    }
+}
+
+    
