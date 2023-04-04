@@ -2,10 +2,16 @@ using System;
 using System.Threading;
 using Altom.AltDriver;
 using alttrashcat_tests_csharp.pages;
+using NUnit.Allure.Core;
 using NUnit.Framework;
+using Allure.Commons;
+using NUnit.Allure.Attributes;
 
 namespace alttrashcat_tests_csharp.tests
 {
+    [TestFixture]
+    [AllureNUnit]
+
     public class UserJourneyTests
     {
         AltDriver altDriver;
@@ -37,6 +43,9 @@ namespace alttrashcat_tests_csharp.tests
         }
 
         [Test]
+        [AllureSeverity(SeverityLevel.critical)]
+        [AllureOwner("AleV")]
+        [AllureDescription("An user journey in which the player starts the game, pauses it, resumes playing until it dies and the game over screen is displayed")]
 
         public void UserJourneyPlayandPause()
         {
@@ -76,6 +85,9 @@ namespace alttrashcat_tests_csharp.tests
 
     
         [Test]
+        [AllureSeverity(SeverityLevel.critical)]
+        [AllureOwner("AleV")]
+        [AllureDescription("An user journey in which the game data is reset and after adding coins the user buys store items and uses them in gameplay")]
         public void UserJourneyBuyItems()
         {
             Assert.Multiple(() =>
@@ -115,7 +127,9 @@ namespace alttrashcat_tests_csharp.tests
         }
 
          [Test]
-
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("AleV")]
+        [AllureDescription("An user journey in which the player has the most chances of revival by using a life power-up and a second chance")]
          public void UserJourneyReviveAndGetASecondChance()
         {
         Assert.Multiple(() =>
@@ -174,7 +188,8 @@ namespace alttrashcat_tests_csharp.tests
             }
             );
         }
-                [TearDown]
+
+        [TearDown]
         public void Dispose()
         {
             altDriver.Stop();

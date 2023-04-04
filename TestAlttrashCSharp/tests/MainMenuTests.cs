@@ -4,9 +4,17 @@ using System;
 using System.Threading;
 using NUnit.Framework;
 using System.Threading.Tasks;
+using NUnit.Allure.Core;
+using NUnit.Allure.Attributes;
+using Allure.Commons;
+
 
 namespace alttrashcat_tests_csharp.tests
 {
+
+
+    [TestFixture]
+    [AllureNUnit]
     public class MainMenuTests
     {
         AltDriver altDriver;
@@ -28,14 +36,11 @@ namespace alttrashcat_tests_csharp.tests
              mainMenuPage.LoadScene();
         }
 
-        [TearDown]
-        public void Dispose()
-        {
-            altDriver.Stop();
-            Thread.Sleep(1000);
-        }
-
+     
         [Test]
+        [AllureSeverity(SeverityLevel.critical)]
+        [AllureOwner("AleV")]
+        [AllureDescription("Verifies that the main menu is correctly displayed")]
         public void TestMainMenuPageLoadedCorrectly()
         {
             Assert.True(mainMenuPage.IsDisplayed());
@@ -47,6 +52,9 @@ namespace alttrashcat_tests_csharp.tests
         }
 
         [Test]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("AleV")]
+        [AllureDescription("Resets the game data")]
         public void TestDeleteData()
         
         {
@@ -57,7 +65,9 @@ namespace alttrashcat_tests_csharp.tests
         }
 
         [Test]
-
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("AleV")]
+        [AllureDescription("Test that the player can buy a magnet and use it in gameplay")]
         public void TestMagnetIsUsedInGameplay()
         {
             mainMenuPage.LoadScene();
@@ -79,7 +89,10 @@ namespace alttrashcat_tests_csharp.tests
             gamePlay.SelectInventoryIcon();
             Assert.IsTrue(gamePlay.PowerUpIconIsDisplayed());
         }
-         [Test]
+        [Test]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("AleV")]
+        [AllureDescription("Test that the player can buy a life power-up and use it in gameplay")]
          public void TestThatLifePowerUpAddsALife()
          {
             mainMenuPage.LoadScene();
@@ -104,7 +117,10 @@ namespace alttrashcat_tests_csharp.tests
  
          }
 
-         [Test]
+        [Test]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("AleV")]
+        [AllureDescription("The player can buy and use the raccoon character")]
 
          public void TestTheUserCanPlayWithRaccoon()
          {
@@ -121,8 +137,10 @@ namespace alttrashcat_tests_csharp.tests
             Assert.IsTrue(gamePlay.RacconIsDisplayed());
          }
 
-         [Test]
-
+        [Test]
+        [AllureSeverity(SeverityLevel.minor)]
+        [AllureOwner("AleV")]
+        [AllureDescription("The player can buy and accesorise the character")]
          public void TestThatTheCharacterCanWearAccessories()
          {
 
@@ -147,8 +165,10 @@ namespace alttrashcat_tests_csharp.tests
 
          }
 
-         [Test]
-
+        [Test]
+        [AllureSeverity(SeverityLevel.minor)]
+        [AllureOwner("AleV")]
+        [AllureDescription("The player can change the theme of the game")]
          public void TestNightTimeThemeisApplied()
          {
             mainMenuPage.LoadScene();
@@ -179,7 +199,9 @@ namespace alttrashcat_tests_csharp.tests
         [TestCase("MasterSlider")]
         [TestCase("MusicSlider")]
         [TestCase("MasterSFXSlider")]
-
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("AleV")]
+        [AllureDescription("The player can modify the sound settings")]
          public void SliderValuesChangeAsExpected(string sliderName)
          {
             //SliderName can be one of the three values : Master, Music,SFX
@@ -196,8 +218,15 @@ namespace alttrashcat_tests_csharp.tests
 
             Console.WriteLine ("intial value is " + initialSliderValue);
            Assert.AreNotSame(initialSliderValue, finalSliderValue);
-
         }
+
+           [TearDown]
+        public void Dispose()
+        {
+            altDriver.Stop();
+            Thread.Sleep(1000);
+        }
+
 
 
 

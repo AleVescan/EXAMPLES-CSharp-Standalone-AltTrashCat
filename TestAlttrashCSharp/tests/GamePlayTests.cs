@@ -3,9 +3,18 @@ using System.Threading;
 using Altom.AltDriver;
 using alttrashcat_tests_csharp.pages;
 using NUnit.Framework;
+using Allure;
+using NUnit.Allure.Core;
+using NUnit.Allure.Attributes;
+using Allure.Commons;
 
 namespace alttrashcat_tests_csharp.tests
 {
+
+    [TestFixture]
+    [AllureNUnit]
+
+
     public class GamePlayTests
     {
         AltDriver altDriver;
@@ -33,11 +42,22 @@ namespace alttrashcat_tests_csharp.tests
 
         }
         [Test]
+      
+        [AllureSeverity(SeverityLevel.critical)]
+        [AllureIssue("ABC-1")]
+        [AllureOwner("AleV")]
+        [AllureDescription("Test to see if the gameplay is started by verifyig specific elements")]
+       
         public void TestGamePlayDisplayedCorrectly()
         {
             Assert.True(gamePlayPage.IsDisplayed());
         }
+
         [Test]
+        [AllureSeverity(SeverityLevel.critical)]
+        [AllureIssue("ABC-2")]
+        [AllureOwner("AleV")]
+        [AllureDescription("Test to see if the gameplay can be paused and resumes correctly afterwards")]
         public void TestGameCanBePausedAndResumed()
         {
             gamePlayPage.PressPause();
@@ -46,19 +66,29 @@ namespace alttrashcat_tests_csharp.tests
             Assert.True(gamePlayPage.IsDisplayed());
         }
         [Test]
+         [AllureSeverity(SeverityLevel.critical)]
+        [AllureOwner("AleV")]
+        [AllureDescription("Test to see if the gameplay can be paused and then stopped")]
         public void TestGameCanBePausedAndStopped()
         {
             gamePlayPage.PressPause();
             pauseOverlayPage.PressMainMenu();
             Assert.True(mainMenuPage.IsDisplayed());
         }
+
         [Test]
+         [AllureSeverity(SeverityLevel.critical)]
+        [AllureOwner("AleV")]
+        [AllureDescription("The player can avoid a certain number of obstacles without dying")]
         public void TestAvoidingObstacles()
         {
             gamePlayPage.AvoidObstacles(5);
             Assert.True(gamePlayPage.GetCurrentLife() > 0);
         }
         [Test]
+         [AllureSeverity(SeverityLevel.critical)]
+        [AllureOwner("AleV")]
+        [AllureDescription("The player dies if it collides into obstacles")]
         public void TestPlayerDiesWhenObstacleNotAvoided()
         {
             float timeout = 20;
@@ -78,7 +108,9 @@ namespace alttrashcat_tests_csharp.tests
         }
 
         [Test]
-
+        [AllureSeverity(SeverityLevel.critical)]
+        [AllureOwner("AleV")]
+        [AllureDescription("Game over screen is displayed after the player dies")]
         public void TestGameOverScreenIsAceesible()
         {
             float timeout = 20;
@@ -99,8 +131,10 @@ namespace alttrashcat_tests_csharp.tests
         
         }
 
-         [Test]
-        
+        [Test]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("AleV")]
+        [AllureDescription("The player can not select to get another chance when there aren`t enough premim coins")]
          
          public void TestGetAnotherChangeDisabledWhenNotEnoughCoins()
          {
