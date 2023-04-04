@@ -5,11 +5,13 @@ using System.Threading;
 using NUnit.Framework;
 using NUnit.Allure.Core;
 using NUnit.Allure.Attributes;
+using Allure.Commons;
 
 namespace alttrashcat_tests_csharp.tests
 {
     [TestFixture]
     [AllureNUnit]
+    [AllureSuite("Store")]
 
     public class StoreMenuTests
     {
@@ -32,21 +34,21 @@ namespace alttrashcat_tests_csharp.tests
             settingsPage = new SettingsPage(altDriver);
         }
 
-        [TearDown]
-        public void Dispose()
-        {
-            altDriver.Stop();
-            Thread.Sleep(1000);
-        }
+       
 
         [Test]
+        [AllureSeverity(SeverityLevel.critical)]
+        [AllureOwner("AleV")]
+        [AllureDescription("The store page is displayed as expected")]
         public void TestStoreMenuPageLoadedCorrectly()
         {
             Assert.True(storePage.StoreIsDisplayed());
         }
 
         [Test]
-
+        [AllureSeverity(SeverityLevel.minor)]
+        [AllureOwner("AleV")]
+        [AllureDescription("Pressing the store, testing helper method, increases the coins")]
         public void TestPressingStoreIncreasesCoins()
         {
             string initialPremiumCoinsValue = storePage.PremiumCounter.GetText(); 
@@ -60,7 +62,9 @@ namespace alttrashcat_tests_csharp.tests
         }
 
         [Test]
-
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("AleV")]
+        [AllureDescription("The buy buttons are active only if there are enough coins available")]
         public void TestBuyButtonsBecomeActiveOnlyWhenEnoughCoins()
         {
            mainMenuPage.LoadScene();
@@ -76,6 +80,12 @@ namespace alttrashcat_tests_csharp.tests
            Assert.IsTrue(storePage.BuyButtonsAreEnabled());
         }
 
+         [TearDown]
+        public void Dispose()
+        {
+            altDriver.Stop();
+            Thread.Sleep(1000);
+        }
 
         
     }

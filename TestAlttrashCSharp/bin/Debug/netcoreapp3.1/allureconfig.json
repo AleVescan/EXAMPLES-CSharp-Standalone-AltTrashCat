@@ -9,5 +9,16 @@
 		"brokenTestData": [
 			"System.Exception"
 		]
-	}
+			},
+		"grouping": {
+			"suites": {
+			"parentSuite": "^parentSuite:?(.+)",
+			"suite": "^suite:?(.+)",
+			"subSuite": "^subSuite:?(.+)"
+			}
+		},
+		"labels": {
+			"owner": "^author:?(.+)",
+			"severity": "^(normal|blocker|critical|minor|trivial)"
+		}
 }

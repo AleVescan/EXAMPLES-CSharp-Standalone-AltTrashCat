@@ -13,6 +13,7 @@ namespace alttrashcat_tests_csharp.tests
 
     [TestFixture]
     [AllureNUnit]
+    [AllureSuite("Gameplay")]
 
 
     public class GamePlayTests

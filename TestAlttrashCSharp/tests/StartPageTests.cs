@@ -5,6 +5,7 @@ using System.Threading;
 using NUnit.Framework;
 using NUnit.Allure.Core;
 using NUnit.Allure.Attributes;
+using Allure.Commons;
 
 namespace alttrashcat_tests_csharp.tests
 {
@@ -25,11 +26,17 @@ namespace alttrashcat_tests_csharp.tests
 
         }
         [Test]
+        [AllureSeverity(SeverityLevel.critical)]
+        [AllureOwner("AleV")]
+        [AllureDescription("The start page is loaded correectly with all elements")]
         public void TestStartPageLoadedCorrectly()
         {
             Assert.True(startPage.IsDisplayed());
         }
         [Test]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("AleV")]
+        [AllureDescription("The start page is displayed when opening the application")]
         public void TestStartButtonLoadMainMenu()
         {
             startPage.PressStart();
