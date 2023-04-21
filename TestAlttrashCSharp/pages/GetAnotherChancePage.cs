@@ -8,9 +8,9 @@ namespace alttrashcat_tests_csharp.pages
         {
         }
 
-        public AltObject GameOverButton { get => Driver.WaitForObject(By.NAME, "GameOver", timeout: 2); }
-        public AltObject PremiumButton { get => Driver.WaitForObject(By.NAME, "Premium Button", timeout: 2); }
-        public AltObject AvailableCurrency { get => Driver.WaitForObject(By.NAME, "PremiumOwnCount", timeout: 2); }
+        public AltObject GameOverButton { get => Driver.WaitForObject(By.NAME, "GameOver"); }
+        public AltObject PremiumButton { get => Driver.WaitForObject(By.NAME, "Premium Button"); }
+        public AltObject AvailableCurrency { get => Driver.WaitForObject(By.NAME, "PremiumOwnCount"); }
 
         // public AltObject NumberOfPremiumCoins {get => Driver.FindObject(By.PATH, " /UICamera/Game/DeathPopup/PremiumDisplay/CurrencyBG").GetText() ;}
 
@@ -23,6 +23,8 @@ namespace alttrashcat_tests_csharp.pages
                 return true;
             return false;
         }
+
+      
         public void PressGameOver()
         {
             GameOverButton.Tap();
@@ -30,6 +32,11 @@ namespace alttrashcat_tests_csharp.pages
         public void PressPremiumButton()
         {
             PremiumButton.Tap();
+        }
+
+        public int GetPremiumButtonState()
+        {
+          return  PremiumButton.CallComponentMethod<int>("UnityEngine.UI.Button", "get_currentSelectionState", "UnityEngine.UI", new object[] { } );
         }
 
     

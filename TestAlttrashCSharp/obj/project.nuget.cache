@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ht2t6HwEhEeKS8yjjPdXxqW/pOv27wsFDWTO7YqBY4HrdJNmIrClAlhePwKMbGbbYO/zsb5pg9HBM2qWDchDWQ==",
+  "dgSpecHash": "/h0Q8RYOn5lsYpoQF8VnWWCYEmUPtEX5/myIcQv6Aj1oUYCoysGDZq2TncE1r4zEfIhRBeG/Jk4RD8KF+9O7hg==",
   "success": true,
   "projectFilePath": "C:\\GitProjects\\FORK-CSharp-AltTrashCat\\EXAMPLES-CSharp-Standalone-AltTrashCat\\TestAlttrashCSharp\\TestAlttrashCSharp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alexandra.vescan\\.nuget\\packages\\allure.commons\\3.5.0.73\\allure.commons.3.5.0.73.nupkg.sha512",
-    "C:\\Users\\alexandra.vescan\\.nuget\\packages\\alttester-driver\\1.8.0\\alttester-driver.1.8.0.nupkg.sha512",
+    "C:\\Users\\alexandra.vescan\\.nuget\\packages\\alttester-driver\\1.8.2\\alttester-driver.1.8.2.nupkg.sha512",
     "C:\\Users\\alexandra.vescan\\.nuget\\packages\\aspectinjector\\2.6.0\\aspectinjector.2.6.0.nupkg.sha512",
     "C:\\Users\\alexandra.vescan\\.nuget\\packages\\microsoft.codecoverage\\15.9.0\\microsoft.codecoverage.15.9.0.nupkg.sha512",
     "C:\\Users\\alexandra.vescan\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
@@ -89,7 +89,6 @@
     "C:\\Users\\alexandra.vescan\\.nuget\\packages\\system.xml.xpath\\4.0.1\\system.xml.xpath.4.0.1.nupkg.sha512",
     "C:\\Users\\alexandra.vescan\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.0.1\\system.xml.xpath.xmldocument.4.0.1.nupkg.sha512",
     "C:\\Users\\alexandra.vescan\\.nuget\\packages\\unity3d.unityengine\\2018.3.5.1\\unity3d.unityengine.2018.3.5.1.nupkg.sha512",
-    "C:\\Users\\alexandra.vescan\\.nuget\\packages\\websocketsharp\\1.0.3-rc11\\websocketsharp.1.0.3-rc11.nupkg.sha512",
     "C:\\Users\\alexandra.vescan\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
     "C:\\Users\\alexandra.vescan\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
     "C:\\Users\\alexandra.vescan\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
@@ -101,16 +100,6 @@
       "warningLevel": 1,
       "message": "Package 'Unity3D.UnityEngine 2018.3.5.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
       "libraryId": "Unity3D.UnityEngine",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'WebSocketSharp 1.0.3-rc11' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
-      "libraryId": "WebSocketSharp",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
       ]

@@ -117,6 +117,17 @@ namespace alttrashcat_tests_csharp.tests
  
          }
 
+         [Test]
+
+         public void TestLeaderBoardNameHighScoreChanges()
+         {
+            mainMenuPage.LoadScene();
+            mainMenuPage.SelectLeaderBoard();
+            mainMenuPage.SetHighScoreName();
+            Assert.AreEqual(mainMenuPage.LeaderboardHighScoreName.GetText(), "HighScore");
+            
+         }
+
         [Test]
         [AllureSeverity(SeverityLevel.normal)]
         [AllureOwner("AleV")]
@@ -218,6 +229,15 @@ namespace alttrashcat_tests_csharp.tests
 
             Console.WriteLine ("intial value is " + initialSliderValue);
            Assert.AreNotSame(initialSliderValue, finalSliderValue);
+        }
+        [Test]
+        public void TestGetParent()
+        { 
+            mainMenuPage.LoadScene();
+            Thread.Sleep(100);
+            var altObject = altDriver.FindObject( By.NAME, "ThemeZone", By.NAME, "UICamera");
+            var altObjectParent = altObject.GetParent();
+            Assert.AreEqual("Loadout", altObjectParent.name);
         }
 
            [TearDown]

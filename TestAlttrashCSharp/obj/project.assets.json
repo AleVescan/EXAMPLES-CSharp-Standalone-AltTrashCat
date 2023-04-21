@@ -22,13 +22,12 @@
           }
         }
       },
-      "AltTester-Driver/1.8.0": {
+      "AltTester-Driver/1.8.2": {
         "type": "package",
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
           "NLog": "4.7.9",
-          "Newtonsoft.Json": "12.0.3",
-          "WebSocketSharp": "1.0.3-rc11"
+          "Newtonsoft.Json": "12.0.3"
         },
         "compile": {
           "lib/netstandard2.0/AltDriver.dll": {}
@@ -1621,15 +1620,6 @@
         "runtime": {
           "lib/UnityEngine.dll": {}
         }
-      },
-      "WebSocketSharp/1.0.3-rc11": {
-        "type": "package",
-        "compile": {
-          "lib/websocket-sharp.dll": {}
-        },
-        "runtime": {
-          "lib/websocket-sharp.dll": {}
-        }
       }
     }
   },
@@ -1651,15 +1641,15 @@
         "lib/netstandard2.0/Allure.Commons.dll"
       ]
     },
-    "AltTester-Driver/1.8.0": {
-      "sha512": "lPkhIJR/kVYAefm2/EMCWXV9kij0nG6hFJA3eENms+5e1yR5jFfqhm6CBe/U+kDUD2VAevZiwL5HHCD7Cp9BZA==",
+    "AltTester-Driver/1.8.2": {
+      "sha512": "nT0v8qOGP77gwZ/tV4696Yp2pq2HfeMVilu2m0mlP4TAbuBljZilwSV2I9q3J2kCSdyOo5EurbmvXLJke/gtYw==",
       "type": "package",
-      "path": "alttester-driver/1.8.0",
+      "path": "alttester-driver/1.8.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE",
-        "alttester-driver.1.8.0.nupkg.sha512",
+        "alttester-driver.1.8.2.nupkg.sha512",
         "alttester-driver.nuspec",
         "lib/net5.0/AltDriver.dll",
         "lib/netstandard2.0/AltDriver.dll"
@@ -5643,24 +5633,11 @@
         "unity3d.unityengine.2018.3.5.1.nupkg.sha512",
         "unity3d.unityengine.nuspec"
       ]
-    },
-    "WebSocketSharp/1.0.3-rc11": {
-      "sha512": "7VCF7f7zVMOvLGD8LeGS4DVXc8lOcB6kXnUMeTxigu+PMiU+6wW5Olq2gYrDU8vDRKOwFY+5RyBaLyzb8skEzA==",
-      "type": "package",
-      "path": "websocketsharp/1.0.3-rc11",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/websocket-sharp.dll",
-        "lib/websocket-sharp.xml",
-        "websocketsharp.1.0.3-rc11.nupkg.sha512",
-        "websocketsharp.nuspec"
-      ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "AltTester-Driver >= 1.8.0",
+      "AltTester-Driver >= 1.8.2",
       "Microsoft.NET.Test.Sdk >= 15.9.0",
       "NUnit.Allure >= 1.2.1.1",
       "NUnit.Console >= 3.16.3",
@@ -5709,7 +5686,7 @@
         "dependencies": {
           "AltTester-Driver": {
             "target": "Package",
-            "version": "[1.8.0, )"
+            "version": "[1.8.2, )"
           },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
@@ -5781,16 +5758,6 @@
       "warningLevel": 1,
       "message": "Package 'Unity3D.UnityEngine 2018.3.5.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
       "libraryId": "Unity3D.UnityEngine",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'WebSocketSharp 1.0.3-rc11' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
-      "libraryId": "WebSocketSharp",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
       ]

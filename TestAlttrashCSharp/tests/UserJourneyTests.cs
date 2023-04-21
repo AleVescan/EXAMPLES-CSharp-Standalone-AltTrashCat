@@ -52,7 +52,7 @@ namespace alttrashcat_tests_csharp.tests
              Assert.Multiple(() =>
         {
            //User opens the game
-           // mainMenuPage.LoadScene();
+            mainMenuPage.LoadScene();
             mainMenuPage.PressRun();
             Assert.True(gamePlay.IsDisplayed());
             gamePlay.AvoidObstacles(5);
@@ -188,6 +188,49 @@ namespace alttrashcat_tests_csharp.tests
             }
             );
         }
+
+        [Test]
+
+        public void TestTheNumberOfAllEnabledElementsFromDifferentPagesIsDifferent()
+        {
+            mainMenuPage.LoadScene();
+            var mainMenuPageEnabledElements= altDriver.GetAllElements(enabled: true);
+            mainMenuPage.PressRun();
+            Thread.Sleep(1000);
+            var gamePlayPageEnabledElements = altDriver.GetAllElements(enabled: true);
+
+            Assert.AreNotEqual(mainMenuPageEnabledElements.Count, gamePlayPageEnabledElements.Count);
+
+        }
+
+        [Test]
+
+        public void TestTheNumberOfAllDisabledElementsFromDifferentPagesIsDifferent()
+        {
+            mainMenuPage.LoadScene();
+            var mainMenuPageDisabledElements= altDriver.GetAllElements(enabled: false);
+            mainMenuPage.PressRun();
+            Thread.Sleep(1000);
+            var gamePlayPageDisabledElements = altDriver.GetAllElements(enabled: false);
+
+            Assert.AreNotEqual(mainMenuPageDisabledElements.Count, gamePlayPageDisabledElements.Count);
+
+        }
+
+        [Test]
+
+        public void TestNumberOfFishbonesIsSame()
+        {
+            mainMenuPage.LoadScene();
+            mainMenuPage.PressRun();
+            Thread.Sleep(1000);
+            var FishbonesName = altDriver.FindObjects(By.NAME,"Pickup(Clone)");
+            var FishbonesPath = altDriver.FindObjects(By.PATH, "//Pickup(Clone)");
+            Assert.AreEqual(FishbonesName.Count, FishbonesPath.Count);
+
+        }
+
+
 
         [TearDown]
         public void Dispose()

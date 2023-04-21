@@ -33,6 +33,8 @@ namespace alttrashcat_tests_csharp.pages
 
         public AltObject AccessoriesSelectorDown {get => Driver.WaitForObject(By.PATH,"/UICamera/Loadout/AccessoriesSelector/ButtonBottom");}
         //public AltObject ThemeImageName { get => Driver.WaitForObject(By.NAME,"ThemeName").GetText();}
+
+        public AltObject LeaderboardHighScoreName {get => Driver.FindObjectsWhichContain(By.PATH, "/UICamera/Leaderboard/Background/Display/Score/Name")[0];}
         
 
         public bool IsDisplayed()
@@ -91,6 +93,20 @@ namespace alttrashcat_tests_csharp.pages
        {
         AccessoriesSelectorDown.Tap();
        }
+
+       public void SelectLeaderBoard()
+       {
+        LeaderBoardButton.Tap();
+       }
+
+       public void SetHighScoreName()
+       {
+        LeaderboardHighScoreName.SetText("HighScore");
+       }
+
+    
+
+       
 
       
 

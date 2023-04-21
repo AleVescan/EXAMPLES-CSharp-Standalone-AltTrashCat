@@ -127,7 +127,6 @@ C:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\Te
 C:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\TestAlttrashCSharp\bin\Debug\netcoreapp3.1\nunit.framework.dll
 C:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\TestAlttrashCSharp\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
 C:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\TestAlttrashCSharp\bin\Debug\netcoreapp3.1\UnityEngine.dll
-C:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\TestAlttrashCSharp\bin\Debug\netcoreapp3.1\websocket-sharp.dll
 C:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\TestAlttrashCSharp\bin\Debug\netcoreapp3.1\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
 C:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\TestAlttrashCSharp\bin\Debug\netcoreapp3.1\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
 C:\GitProjects\FORK-CSharp-AltTrashCat\EXAMPLES-CSharp-Standalone-AltTrashCat\TestAlttrashCSharp\bin\Debug\netcoreapp3.1\de\Microsoft.TestPlatform.CoreUtilities.resources.dll

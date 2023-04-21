@@ -80,6 +80,32 @@ namespace alttrashcat_tests_csharp.tests
            Assert.IsTrue(storePage.BuyButtonsAreEnabled());
         }
 
+        [Test]
+        public void TestBuyMagnetCanBeSetInteractableWithoutEnoughCoins()
+        {
+            mainMenuPage.LoadScene();
+            settingsPage.DeleteData();
+            mainMenuPage.PressStore();
+            Assert.IsFalse(storePage.BuyButtonsAreEnabled());
+            Thread.Sleep(1000);
+            storePage.EnableMagnetBuyButton();
+            Thread.Sleep(1000);
+            Assert.IsTrue(storePage.BuyMagnetButtonIsEnabled());
+        
+
+        }
+
+        [Test]
+
+        public void TestThatPremiumButtonAtCoordinatesIsFound()
+        {
+            mainMenuPage.LoadScene();
+            mainMenuPage.PressStore();
+            Assert.AreEqual(storePage.PremiumButtonAtCoordinates.GetText(), "+");
+
+
+        }
+
          [TearDown]
         public void Dispose()
         {

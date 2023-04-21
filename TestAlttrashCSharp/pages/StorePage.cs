@@ -48,8 +48,9 @@ namespace alttrashcat_tests_csharp.pages
         public AltObject BuyPartyHatButton {get => Driver.FindObjectsWhichContain(By.NAME, "BuyButton")[1] ;}
         public AltObject BuySmartHatButton {get => Driver.FindObjectsWhichContain(By.NAME, "BuyButton")[2] ;}
         public AltObject BuyRacoonSafetyButton {get => Driver.FindObjectsWhichContain(By.NAME, "BuyButton")[3] ;}
-    
+        public AltObject PremiumButtonAtCoordinates {get=> Driver.FindObjectAtCoordinates(new AltVector2(400, 799));}
 
+       
 
         public bool BuyButtonsAreEnabled()
         {
@@ -65,6 +66,15 @@ namespace alttrashcat_tests_csharp.pages
             else 
                 return false; 
 
+        }
+
+        public bool BuyMagnetButtonIsEnabled()
+        {
+            var BuyMagnetEnabled = BuyMagnetButton.GetComponentProperty<string>(componentName, propertyName, assemblyName);
+             if (BuyMagnetEnabled == "true")
+             return true;
+            else 
+                return false; 
         }
 
         public void BuyMagnet()
@@ -130,6 +140,13 @@ namespace alttrashcat_tests_csharp.pages
            BuyRacoonSafetyButton.Tap();
             
         }
+
+        public void EnableMagnetBuyButton()
+        {
+            BuyMagnetButton.SetComponentProperty("UnityEngine.UI.Button", "interactable", "True", "UnityEngine.UI");
+        }
+
+
     }
 }
 

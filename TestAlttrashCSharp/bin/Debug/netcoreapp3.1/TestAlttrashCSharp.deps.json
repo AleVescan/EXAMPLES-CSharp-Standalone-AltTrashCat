@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v3.1": {
       "TestAlttrashCSharp/1.0.0": {
         "dependencies": {
-          "AltTester-Driver": "1.8.0",
+          "AltTester-Driver": "1.8.2",
           "Microsoft.NET.Test.Sdk": "15.9.0",
           "NUnit.Allure": "1.2.1.1",
           "NUnit.Console": "3.16.3",
@@ -33,12 +33,11 @@
           }
         }
       },
-      "AltTester-Driver/1.8.0": {
+      "AltTester-Driver/1.8.2": {
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
           "NLog": "4.7.9",
-          "Newtonsoft.Json": "13.0.1",
-          "WebSocketSharp": "1.0.3-rc11"
+          "Newtonsoft.Json": "13.0.1"
         },
         "runtime": {
           "lib/netstandard2.0/AltDriver.dll": {
@@ -1038,14 +1037,6 @@
             "fileVersion": "0.0.0.0"
           }
         }
-      },
-      "WebSocketSharp/1.0.3-rc11": {
-        "runtime": {
-          "lib/websocket-sharp.dll": {
-            "assemblyVersion": "1.0.2.59611",
-            "fileVersion": "1.0.2.59611"
-          }
-        }
       }
     }
   },
@@ -1062,12 +1053,12 @@
       "path": "allure.commons/3.5.0.73",
       "hashPath": "allure.commons.3.5.0.73.nupkg.sha512"
     },
-    "AltTester-Driver/1.8.0": {
+    "AltTester-Driver/1.8.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-lPkhIJR/kVYAefm2/EMCWXV9kij0nG6hFJA3eENms+5e1yR5jFfqhm6CBe/U+kDUD2VAevZiwL5HHCD7Cp9BZA==",
-      "path": "alttester-driver/1.8.0",
-      "hashPath": "alttester-driver.1.8.0.nupkg.sha512"
+      "sha512": "sha512-nT0v8qOGP77gwZ/tV4696Yp2pq2HfeMVilu2m0mlP4TAbuBljZilwSV2I9q3J2kCSdyOo5EurbmvXLJke/gtYw==",
+      "path": "alttester-driver/1.8.2",
+      "hashPath": "alttester-driver.1.8.2.nupkg.sha512"
     },
     "AspectInjector/2.6.0": {
       "type": "package",
@@ -1649,13 +1640,6 @@
       "sha512": "sha512-63ZCYwGdoBCmsJCUI6dodSY+1TrU/7lTDmfF+492Z6nn8my30E3sb5HXLe7qm7MLvBIcKz9TCy114yu5VGycKA==",
       "path": "unity3d.unityengine/2018.3.5.1",
       "hashPath": "unity3d.unityengine.2018.3.5.1.nupkg.sha512"
-    },
-    "WebSocketSharp/1.0.3-rc11": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-7VCF7f7zVMOvLGD8LeGS4DVXc8lOcB6kXnUMeTxigu+PMiU+6wW5Olq2gYrDU8vDRKOwFY+5RyBaLyzb8skEzA==",
-      "path": "websocketsharp/1.0.3-rc11",
-      "hashPath": "websocketsharp.1.0.3-rc11.nupkg.sha512"
     }
   }
 }

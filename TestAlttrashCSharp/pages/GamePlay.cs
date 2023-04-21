@@ -15,6 +15,9 @@ namespace alttrashcat_tests_csharp.pages
         public AltObject RacconMesh {get => Driver.WaitForObject(By.PATH, "/PlayerPivot/CharacterSlot/character(Clone)/RacoonMesh");}
         public AltObject NightLights {get => Driver.WaitForObject(By.NAME, "LightGlows", timeout:10 );}
         public AltObject RacconConstructionGear {get => Driver.WaitForObject(By.PATH, "/PlayerPivot/CharacterSlot/character(Clone)/ConstructionGearMesh");}
+        public AltObject CharacterSlot {get => Driver.WaitForObject(By.PATH, "/PlayerPivot/CharacterSlot");}
+        public AltObject RunnerMultipler {get => Driver.WaitForObject(By.PATH, "/UICamera/Game/WholeUI/ScoreZone/ScoreLabel/ScoreText/MultiplierText");}
+    
 
 
 
@@ -82,6 +85,24 @@ namespace alttrashcat_tests_csharp.pages
         {
             return Character.GetComponentProperty<int>("CharacterInputController", "currentLife", "Assembly-CSharp");
         }
+
+        public void SetCharacterInvincible(string state)
+        //state can be "True"or"False"
+        {
+            string[] parameters = new[] {state};
+            CharacterSlot.CallComponentMethod<string>("CharacterCollider", "SetInvincibleExplicit", "Assembly-CSharp", parameters) ;
+        }
+
+        public void SetRunnerMultiplier()
+        {
+            
+           // RunnerMultipler.SetText("x10");
+      
+            RunnerMultipler.SetComponentProperty("UnityEngine.UI.Text", "text", "x 10", "UnityEngine.UI" );
+
+        }
+
+      
         public void AvoidObstacles(int numberOfObstacles)
         {
             var character = Character;
