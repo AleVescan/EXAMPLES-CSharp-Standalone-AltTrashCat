@@ -1,4 +1,5 @@
 using Altom.AltDriver;
+using Newtonsoft.Json;
 
 namespace alttrashcat_tests_csharp.pages
 {
@@ -38,6 +39,26 @@ namespace alttrashcat_tests_csharp.pages
         {
           return  PremiumButton.CallComponentMethod<int>("UnityEngine.UI.Button", "get_currentSelectionState", "UnityEngine.UI", new object[] { } );
         }
+
+
+        public float GetPremiumButtonCurrentColorRGB(string colorChannel)
+        {
+            object PremiumCurrentColor = PremiumButton.CallComponentMethod<object>("UnityEngine.CanvasRenderer", "GetColor", "UnityEngine.UIModule", new object[] { });
+            string json = JsonConvert.SerializeObject(PremiumCurrentColor);
+            dynamic colorData = JsonConvert.DeserializeObject(json);
+            float rValue = colorData[colorChannel];
+            return rValue;
+        }
+
+        public float GetPremiumButtonStateColorRGB(string state, string colorStateChannel)
+        {
+           
+            float PremiumButtonStateColorRGB = PremiumButton.GetComponentProperty<float>("UnityEngine.UI.Button", "colors."+state+"."+colorStateChannel, "UnityEngine.UI");
+            return PremiumButtonStateColorRGB; 
+        }
+
+        
+
 
     
 
