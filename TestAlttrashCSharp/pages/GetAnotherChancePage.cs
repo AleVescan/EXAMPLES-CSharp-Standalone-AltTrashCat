@@ -12,6 +12,9 @@ namespace alttrashcat_tests_csharp.pages
         public AltObject GameOverButton { get => Driver.WaitForObject(By.NAME, "GameOver"); }
         public AltObject PremiumButton { get => Driver.WaitForObject(By.NAME, "Premium Button"); }
         public AltObject AvailableCurrency { get => Driver.WaitForObject(By.NAME, "PremiumOwnCount"); }
+        public AltObject GetAnotherChanceText {get => Driver.WaitForObject(By.PATH, "/UICamera/Game/DeathPopup/Text");}
+        public AltObject PremiumDisplay {get => Driver.FindObject(By.PATH, "/UICamera/Game/DeathPopup/PremiumDisplay");}
+
 
         // public AltObject NumberOfPremiumCoins {get => Driver.FindObject(By.PATH, " /UICamera/Game/DeathPopup/PremiumDisplay/CurrencyBG").GetText() ;}
 
@@ -50,6 +53,8 @@ namespace alttrashcat_tests_csharp.pages
             return rValue;
         }
 
+        
+
         public float GetPremiumButtonStateColorRGB(string state, string colorStateChannel)
         {
            
@@ -59,9 +64,5 @@ namespace alttrashcat_tests_csharp.pages
 
         
 
-
-    
-
-        
     }
 }

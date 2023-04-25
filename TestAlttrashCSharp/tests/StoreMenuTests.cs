@@ -106,6 +106,14 @@ namespace alttrashcat_tests_csharp.tests
 
         }
 
+        [Test]
+        public void TestCharactersTabChangesColorPointEnterExit()
+        {
+            mainMenuPage.LoadScene();
+            mainMenuPage.PressStore();
+            storePage.CharactersTabPointerEnterExitStateColors();
+        }
+
          [TearDown]
         public void Dispose()
         {

@@ -132,8 +132,7 @@ namespace alttrashcat_tests_csharp.tests
         [AllureDescription("An user journey in which the player has the most chances of revival by using a life power-up and a second chance")]
          public void UserJourneyReviveAndGetASecondChance()
         {
-        Assert.Multiple(() =>
-        {
+     
            settingsPage.DeleteData();
            mainMenuPage.PressStore();
            // verify if buttons are disabled when no money
@@ -174,7 +173,7 @@ namespace alttrashcat_tests_csharp.tests
             {
                 try
                 {
-                    getAnotherChancePage.IsDisplayed();
+                    gameOverScreen.IsDisplayed();
                     break;
                 }
                 catch (Exception)
@@ -185,8 +184,8 @@ namespace alttrashcat_tests_csharp.tests
 
             Assert.True(gameOverScreen.IsDisplayed());
 
-            }
-            );
+            
+           
         }
 
         [Test]

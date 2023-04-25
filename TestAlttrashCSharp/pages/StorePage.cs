@@ -2,6 +2,7 @@ using Altom.AltDriver;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace alttrashcat_tests_csharp.pages
 {
@@ -48,7 +49,8 @@ namespace alttrashcat_tests_csharp.pages
         public AltObject BuyPartyHatButton {get => Driver.FindObjectsWhichContain(By.NAME, "BuyButton")[1] ;}
         public AltObject BuySmartHatButton {get => Driver.FindObjectsWhichContain(By.NAME, "BuyButton")[2] ;}
         public AltObject BuyRacoonSafetyButton {get => Driver.FindObjectsWhichContain(By.NAME, "BuyButton")[3] ;}
-        public AltObject PremiumButtonAtCoordinates {get=> Driver.FindObjectAtCoordinates(new AltVector2(400, 799));}
+        public AltObject SardineImage {get => Driver.FindObject(By.PATH, "/Canvas/Background/Premium/Image");}
+        public AltObject PremiumButtonAtCoordinates {get=> Driver.FindObjectAtCoordinates(new AltVector2(SardineImage.x - 46, SardineImage.y));}
 
        
 
@@ -144,6 +146,23 @@ namespace alttrashcat_tests_csharp.pages
         public void EnableMagnetBuyButton()
         {
             BuyMagnetButton.SetComponentProperty("UnityEngine.UI.Button", "interactable", "True", "UnityEngine.UI");
+        }
+
+        public void CharactersTabPointerEnterExitStateColors()
+        {
+            object normalCharactersTabColor= CharactersTab.CallComponentMethod<object>("UnityEngine.CanvasRenderer", "GetColor", "UnityEngine.UIModule", new object[] { });
+            Console.WriteLine(" Normal button color " +  normalCharactersTabColor);
+            CharactersTab.PointerEnterObject();
+            Thread.Sleep(1000);
+
+            object hoverCharactersTabColor= CharactersTab.CallComponentMethod<object>("UnityEngine.CanvasRenderer", "GetColor", "UnityEngine.UIModule", new object[] { });
+            Console.WriteLine(" Hover button color " +  hoverCharactersTabColor);
+
+            CharactersTab.PointerExitObject();
+            Thread.Sleep(1000);
+            object afterCharactersTabColor = CharactersTab.CallComponentMethod<object>("UnityEngine.CanvasRenderer", "GetColor", "UnityEngine.UIModule", new object[] { });
+             Console.WriteLine(" After exit button color " +  hoverCharactersTabColor);
+
         }
 
 

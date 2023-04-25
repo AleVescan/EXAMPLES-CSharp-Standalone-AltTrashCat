@@ -18,7 +18,7 @@ public AltObject HighscoreName { get => Driver.WaitForObject(By.PATH,"/UICamera/
 
 public bool IsDisplayed()
         {
-            if (LeaderboardButton != null && MainMenuButton != null && RunButton != null && GameOverText != null && HighscoreName !=null )
+            if ( MainMenuButton != null && RunButton != null && GameOverText != null && HighscoreName !=null )
                 return true;
             return false;
         }

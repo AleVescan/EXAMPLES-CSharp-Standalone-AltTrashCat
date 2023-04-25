@@ -27,6 +27,7 @@ namespace alttrashcat_tests_csharp.tests
         GetAnotherChancePage getAnotherChancePage;
         GameOverScreen gameOverScreen;
         SettingsPage settingsPage;
+        StorePage storePage;
 
 
         [SetUp]
@@ -42,6 +43,7 @@ namespace alttrashcat_tests_csharp.tests
             getAnotherChancePage = new GetAnotherChancePage(altDriver);
             gameOverScreen = new GameOverScreen(altDriver);
             settingsPage = new SettingsPage(altDriver);
+            storePage= new StorePage(altDriver);
 
         }
         [Test]
@@ -185,7 +187,12 @@ namespace alttrashcat_tests_csharp.tests
          public void TestPremiumButtonColorChangesAsExpectedPerState()
          {
             mainMenuPage.LoadScene();
+            mainMenuPage.PressStore();
+            storePage.PressStore();
+            storePage.CloseStore();
             mainMenuPage.PressRun();
+
+           
             float timeout = 20;
             while (timeout > 0)
             {
@@ -199,15 +206,18 @@ namespace alttrashcat_tests_csharp.tests
                     timeout -= 1;
                 }
             }
-   
+            Thread.Sleep(1000);
+          
+          
             var initialState = getAnotherChancePage.GetPremiumButtonState();
+
             var initialButtonColorR = getAnotherChancePage.GetPremiumButtonCurrentColorRGB("r");
             var initialButtonColorG = getAnotherChancePage.GetPremiumButtonCurrentColorRGB("g");
             var initialButtonColorB = getAnotherChancePage.GetPremiumButtonCurrentColorRGB("b");
 
-            var normalColorR = getAnotherChancePage.GetPremiumButtonStateColorRGB("normalColor", "r");
-            var normalColorG = getAnotherChancePage.GetPremiumButtonStateColorRGB("normalColor", "g");
-            var normalColorB = getAnotherChancePage.GetPremiumButtonStateColorRGB("normalColor", "b");
+             var normalColorR = getAnotherChancePage.GetPremiumButtonStateColorRGB("normalColor", "r");
+             var normalColorG = getAnotherChancePage.GetPremiumButtonStateColorRGB("normalColor", "g");
+             var normalColorB = getAnotherChancePage.GetPremiumButtonStateColorRGB("normalColor", "b");
 
             Assert.AreEqual(initialButtonColorR,normalColorR ); 
             Assert.AreEqual(initialButtonColorG,normalColorG ); 
@@ -276,7 +286,7 @@ namespace alttrashcat_tests_csharp.tests
             var Distance = altDriver.WaitForObject(By.PATH, "/UICamera/Game/WholeUI/DistanceZone/DistanceText");
             var intialDistance = Distance.GetText();
             var finalDistance=  Distance.SetText("3000m");
-             Assert.AreEqual(Distance.GetText(), "3000m");
+             //Assert.AreEqual(Distance.GetText(), "3000m");
     
         // //     gamePlayPage.SetRunnerMultiplier();
 

@@ -8,7 +8,6 @@ namespace alttrashcat_tests_csharp.pages
         {
         }
         
-        
         public void LoadScene()
         {
             Driver.LoadScene("Main");
@@ -21,21 +20,16 @@ namespace alttrashcat_tests_csharp.pages
         public AltObject RunButton { get => Driver.WaitForObject(By.NAME, "StartButton", timeout: 10); }
         public AltObject CharacterName { get => Driver.WaitForObject(By.NAME, "CharName", timeout: 10); }
         public AltObject ThemeName { get => Driver.WaitForObject(By.NAME, "ThemeName", timeout: 10); }
-
         public AltObject ThemeImage {get => Driver.WaitForObject(By.PATH,"/UICamera/Loadout/ThemeZone/Image", timeout:10);}
         public AltObject ButtonRight {get => Driver.WaitForObject(By.PATH,"/UICamera/Loadout/PowerupZone/ButtonRight", timeout:10);}
         public AltObject ButtonLeft {get => Driver.WaitForObject(By.PATH,"/UICamera/Loadout/PowerupZone/ButtonLeft", timeout:10);}
         public AltObject CharzoneButtonRight {get => Driver.WaitForObject(By.PATH,"/UICamera/Loadout/CharZone/CharName/CharSelector/ButtonRight", timeout:10);}
-
         public AltObject PowerUpFirstLeft {get => Driver.WaitForObject(By.PATH,"/UICamera/Loadout/PowerupZone/Image/Amount", timeout:10);}
-
         public AltObject ThemeSelectorRight {get => Driver.WaitForObject(By.PATH,"/UICamera/Loadout/ThemeZone/ThemeSelector/ButtonRight");}
-
         public AltObject AccessoriesSelectorDown {get => Driver.WaitForObject(By.PATH,"/UICamera/Loadout/AccessoriesSelector/ButtonBottom");}
         //public AltObject ThemeImageName { get => Driver.WaitForObject(By.NAME,"ThemeName").GetText();}
-
         public AltObject LeaderboardHighScoreName {get => Driver.FindObjectsWhichContain(By.PATH, "/UICamera/Leaderboard/Background/Display/Score/Name")[0];}
-        
+        public AltObject AltUnityLogo {get => Driver.FindObject(By.PATH, "/AltTesterPrefab/AltUnityDialog/Icon");}
 
         public bool IsDisplayed()
         {
@@ -102,6 +96,14 @@ namespace alttrashcat_tests_csharp.pages
        public void SetHighScoreName()
        {
         LeaderboardHighScoreName.SetText("HighScore");
+       }
+
+       public void MoveLogoMainPage()
+       {
+        Driver.MoveMouse(new AltVector2(AltUnityLogo.x, AltUnityLogo.y+3000));
+        AltUnityLogo.PointerEnterObject();
+        Driver.MoveMouse(new AltVector2(AltUnityLogo.x+3000, AltUnityLogo.y+3000));
+        AltUnityLogo.PointerExitObject();
        }
 
     

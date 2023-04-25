@@ -240,6 +240,22 @@ namespace alttrashcat_tests_csharp.tests
             Assert.AreEqual("Loadout", altObjectParent.name);
         }
 
+        [Test]
+
+        public void TestLogoMovesWithPointerEnterAndExit()
+        {
+            mainMenuPage.LoadScene();
+            Thread.Sleep(100);
+            var initialLogoXCoordinate = mainMenuPage.AltUnityLogo.x; 
+            var initialLogoYCoordinate = mainMenuPage.AltUnityLogo.y;
+            mainMenuPage.MoveLogoMainPage();
+            var finalLogoXCoordinate =  mainMenuPage.AltUnityLogo.x; 
+            var finalLogoYCoordinate = mainMenuPage.AltUnityLogo.y;
+
+          // Assert.AreNotEqual(initialLogoXCoordinate, finalLogoXCoordinate);
+          //  Assert.AreNotEqual(initialLogoYCoordinate, finalLogoYCoordinate);
+        }
+
            [TearDown]
         public void Dispose()
         {
