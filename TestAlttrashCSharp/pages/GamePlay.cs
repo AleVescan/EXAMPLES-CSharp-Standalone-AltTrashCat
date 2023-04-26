@@ -86,6 +86,7 @@ namespace alttrashcat_tests_csharp.pages
             return Character.GetComponentProperty<int>("CharacterInputController", "currentLife", "Assembly-CSharp");
         }
 
+
         public void SetCharacterInvincible(string state)
         //state can be "True"or"False"
         {
@@ -101,6 +102,11 @@ namespace alttrashcat_tests_csharp.pages
             RunnerMultipler.SetComponentProperty("UnityEngine.UI.Text", "text", "x 10", "UnityEngine.UI" );
 
         }
+
+        // public void WaitForComponentPropertyBoxColliderEnabled()
+        // {
+        //     var propertyBoxColliderEnabled =  Driver.WaitForComponentProperty<string>( "UnityEngine.BoxCollider" , "enabled", <string> "True", "UnityEngine.PhysicsModule");
+        // }
 
       
         public void AvoidObstacles(int numberOfObstacles)

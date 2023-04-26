@@ -299,6 +299,76 @@ namespace alttrashcat_tests_csharp.tests
 
          }
 
+         [Test]
+
+         public void TestGetWorldPositionTrashCat()
+         {
+            AltVector3 worldPositionCharacter = gamePlayPage.Character.GetWorldPosition();
+
+            Console.WriteLine("World position of character X axis " + worldPositionCharacter.x);
+            Console.WriteLine("World position of character Y axis " + worldPositionCharacter.y);
+            Console.WriteLine("World position of character Z axis " + worldPositionCharacter.z);
+
+            Thread.Sleep(20000);
+            AltVector3 worldPositionCharacterAfterSomeTime = gamePlayPage.Character.GetWorldPosition();
+
+            Console.WriteLine("World position of character after some time X axis " + worldPositionCharacterAfterSomeTime.x);
+            Console.WriteLine("World position of character after some time Y axis " + worldPositionCharacterAfterSomeTime.y);
+            Console.WriteLine("World position of character after some time Z axis " + worldPositionCharacterAfterSomeTime.z);
+
+            Assert.AreNotEqual(worldPositionCharacter.z, worldPositionCharacterAfterSomeTime.z);
+         }
+
+        [Test]
+         public void TestGetSCreenPositionTrashCat()
+         {
+            AltVector2 screenPositionCharacter = gamePlayPage.Character.GetScreenPosition();
+
+            Console.WriteLine("Screen position of character X axis " + screenPositionCharacter.x);
+            Console.WriteLine("Screen position of character Y axis " + screenPositionCharacter.y);
+
+    
+           
+            Thread.Sleep(5000);
+
+            altDriver.PressKey(AltKeyCode.LeftArrow);
+            Thread.Sleep(1000);
+           
+            AltVector2 screenPositionCharacteraAfterSomeTime = gamePlayPage.Character.GetScreenPosition();
+
+            Console.WriteLine("Screen position of character after some time X axis " + screenPositionCharacteraAfterSomeTime.x);
+            Console.WriteLine("Screen position of character after some time Y axis " + screenPositionCharacteraAfterSomeTime.y);
+             Assert.AreNotEqual(screenPositionCharacter.y, screenPositionCharacteraAfterSomeTime.y);
+         }
+
+         [Test]
+
+         public void TestGetAllComponentsMethod()
+         {
+
+            Console.WriteLine("All components are " + gamePlayPage.Character.GetAllComponents().Count );
+            Console.WriteLine("First component is " + gamePlayPage.Character.GetAllComponents()[0].componentName);
+            Console.WriteLine("Second component is " + gamePlayPage.Character.GetAllComponents()[1].componentName);
+            Console.WriteLine("Third component is " + gamePlayPage.Character.GetAllComponents()[2].componentName);
+            Console.WriteLine("Fourth component is " + gamePlayPage.Character.GetAllComponents()[3].componentName);
+            Console.WriteLine("First assembly is " + gamePlayPage.Character.GetAllComponents()[0].assemblyName);
+            Console.WriteLine("Second assembly is " + gamePlayPage.Character.GetAllComponents()[1].assemblyName);
+            Console.WriteLine("Third assembly is " + gamePlayPage.Character.GetAllComponents()[2].assemblyName);
+            Console.WriteLine("Fourth assembly is " + gamePlayPage.Character.GetAllComponents()[3].assemblyName);
+
+            Assert.AreEqual(gamePlayPage.Character.GetAllComponents().Count , 4);
+          
+         }
+
+        //  [Test]
+
+        //  public void TestGetAllPropertiesMethod()
+        //  {
+
+        //     Console.WriteLine("All components are " + gamePlayPage.Character.GetAllProperties(altComponent: UnityEngine.Transform) );
+        //  }
+        
+        
 
 
         [TearDown]
