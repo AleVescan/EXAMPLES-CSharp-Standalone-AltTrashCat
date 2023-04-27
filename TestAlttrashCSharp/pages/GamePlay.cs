@@ -17,6 +17,7 @@ namespace alttrashcat_tests_csharp.pages
         public AltObject RacconConstructionGear {get => Driver.WaitForObject(By.PATH, "/PlayerPivot/CharacterSlot/character(Clone)/ConstructionGearMesh");}
         public AltObject CharacterSlot {get => Driver.WaitForObject(By.PATH, "/PlayerPivot/CharacterSlot");}
         public AltObject RunnerMultipler {get => Driver.WaitForObject(By.PATH, "/UICamera/Game/WholeUI/ScoreZone/ScoreLabel/ScoreText/MultiplierText");}
+        public AltObject CharacterFoundByWhichContainsWithCamera { get => Driver.FindObjectWhichContains(By.NAME, "Character", By.NAME,  "UICamera" );}
     
 
 

@@ -303,18 +303,28 @@ namespace alttrashcat_tests_csharp.tests
 
          public void TestGetWorldPositionTrashCat()
          {
-            AltVector3 worldPositionCharacter = gamePlayPage.Character.GetWorldPosition();
+
+            var Character = gamePlayPage.Character; 
+            AltVector3 worldPositionCharacter = Character.GetWorldPosition();
 
             Console.WriteLine("World position of character X axis " + worldPositionCharacter.x);
             Console.WriteLine("World position of character Y axis " + worldPositionCharacter.y);
             Console.WriteLine("World position of character Z axis " + worldPositionCharacter.z);
 
             Thread.Sleep(20000);
-            AltVector3 worldPositionCharacterAfterSomeTime = gamePlayPage.Character.GetWorldPosition();
+             AltVector3 worldPositionCharacterAfterSomeTime = Character.GetWorldPosition();
+            AltVector3 worlPositionUpdateObject = Character.UpdateObject().GetWorldPosition();
+           
 
             Console.WriteLine("World position of character after some time X axis " + worldPositionCharacterAfterSomeTime.x);
             Console.WriteLine("World position of character after some time Y axis " + worldPositionCharacterAfterSomeTime.y);
             Console.WriteLine("World position of character after some time Z axis " + worldPositionCharacterAfterSomeTime.z);
+
+            Console.WriteLine("World position of UpdateObject X axis " + worlPositionUpdateObject.x);
+            Console.WriteLine("World position of UpdateObject Y axis " + worlPositionUpdateObject.y);
+            Console.WriteLine("World position of UpdateObject  Z axis " + worlPositionUpdateObject.z);
+
+
 
             Assert.AreNotEqual(worldPositionCharacter.z, worldPositionCharacterAfterSomeTime.z);
          }
@@ -322,23 +332,24 @@ namespace alttrashcat_tests_csharp.tests
         [Test]
          public void TestGetSCreenPositionTrashCat()
          {
-            AltVector2 screenPositionCharacter = gamePlayPage.Character.GetScreenPosition();
+
+            var Character = altDriver.FindObject(By.NAME, "CharacterSlot");
+            AltVector2 screenPositionCharacter = Character.GetScreenPosition();
 
             Console.WriteLine("Screen position of character X axis " + screenPositionCharacter.x);
             Console.WriteLine("Screen position of character Y axis " + screenPositionCharacter.y);
 
-    
-           
-            Thread.Sleep(5000);
 
+            Thread.Sleep(5000);
             altDriver.PressKey(AltKeyCode.LeftArrow);
             Thread.Sleep(1000);
-           
-            AltVector2 screenPositionCharacteraAfterSomeTime = gamePlayPage.Character.GetScreenPosition();
+
+    
+            AltVector2 screenPositionCharacteraAfterSomeTime = Character.UpdateObject().GetScreenPosition();
 
             Console.WriteLine("Screen position of character after some time X axis " + screenPositionCharacteraAfterSomeTime.x);
             Console.WriteLine("Screen position of character after some time Y axis " + screenPositionCharacteraAfterSomeTime.y);
-             Assert.AreNotEqual(screenPositionCharacter.y, screenPositionCharacteraAfterSomeTime.y);
+            Assert.AreNotEqual(screenPositionCharacter.x, screenPositionCharacteraAfterSomeTime.x);
          }
 
          [Test]
@@ -356,19 +367,69 @@ namespace alttrashcat_tests_csharp.tests
             Console.WriteLine("Third assembly is " + gamePlayPage.Character.GetAllComponents()[2].assemblyName);
             Console.WriteLine("Fourth assembly is " + gamePlayPage.Character.GetAllComponents()[3].assemblyName);
 
-            Assert.AreEqual(gamePlayPage.Character.GetAllComponents().Count , 4);
-          
+            Assert.AreEqual(gamePlayPage.Character.GetAllComponents().Count , 4);  
          }
 
-        //  [Test]
+        [Test]
+         public void TestGetAllPropertiesMethod()
+         {
+            AltComponent altComponentForProperties= new AltComponent("UnityEngine.Transform","UnityEngine.CoreModule");
 
-        //  public void TestGetAllPropertiesMethod()
-        //  {
+            Console.WriteLine("Property  " + gamePlayPage.Character.GetAllProperties(altComponentForProperties)[0].name );
+            Console.WriteLine("Property  " + gamePlayPage.Character.GetAllProperties(altComponentForProperties)[1].name );
+            Console.WriteLine("Property  " + gamePlayPage.Character.GetAllProperties(altComponentForProperties)[2].name );
+            Console.WriteLine("Property  " + gamePlayPage.Character.GetAllProperties(altComponentForProperties)[3].name );
+            Console.WriteLine("Property  " + gamePlayPage.Character.GetAllProperties(altComponentForProperties)[4].name );
+         }
+        
+        [Test]
+         public void TestGetAllMethodsMethod()
+         {
+            AltComponent altComponentForMethods= new AltComponent("UnityEngine.Transform","UnityEngine.CoreModule");
 
-        //     Console.WriteLine("All components are " + gamePlayPage.Character.GetAllProperties(altComponent: UnityEngine.Transform) );
-        //  }
+            Console.WriteLine("Method  " + gamePlayPage.Character.GetAllMethods(altComponentForMethods)[0] );
+            Assert.AreEqual(gamePlayPage.Character.GetAllMethods(altComponentForMethods)[0], "UnityEngine.Vector3 get_position()" );
+
+            Console.WriteLine("Method   " + gamePlayPage.Character.GetAllMethods(altComponentForMethods)[1] );
+            Assert.AreEqual(gamePlayPage.Character.GetAllMethods(altComponentForMethods)[1], "Void set_position(UnityEngine.Vector3)" );
+
+            Console.WriteLine("Method   " + gamePlayPage.Character.GetAllMethods(altComponentForMethods)[2] );
+            Assert.AreEqual(gamePlayPage.Character.GetAllMethods(altComponentForMethods)[2], "UnityEngine.Vector3 get_localPosition()" );
+
+            Console.WriteLine("Method   " + gamePlayPage.Character.GetAllMethods(altComponentForMethods)[3] );
+            Assert.AreEqual(gamePlayPage.Character.GetAllMethods(altComponentForMethods)[3], "Void set_localPosition(UnityEngine.Vector3)" );
+
+            Console.WriteLine("Method   " + gamePlayPage.Character.GetAllMethods(altComponentForMethods)[4] );
+            Assert.AreEqual(gamePlayPage.Character.GetAllMethods(altComponentForMethods)[4], "UnityEngine.Vector3 GetLocalEulerAngles(UnityEngine.RotationOrder)" );
+         }
+
+         [Test]
+         public void TestGetAllFieldssMethod()
+         {
+            AltComponent altComponentForFields= new AltComponent("CharacterCollider","Assembly-CSharp");
+
+            Console.WriteLine("Number of Fields  " + gamePlayPage.Character.GetAllFields(altComponentForFields).Count );
+            Console.WriteLine("Field   " + gamePlayPage.Character.GetAllFields(altComponentForFields)[0].name );
+            Console.WriteLine("Field   " + gamePlayPage.Character.GetAllFields(altComponentForFields)[1].name );
+            Console.WriteLine("Field   " + gamePlayPage.Character.GetAllFields(altComponentForFields)[2].name );
+            Console.WriteLine("Field   " + gamePlayPage.Character.GetAllFields(altComponentForFields)[3].name );
+            Console.WriteLine("Field   " + gamePlayPage.Character.GetAllFields(altComponentForFields)[4].name );
+         }
         
-        
+
+      
+
+         [Test]
+         public void TestFindObjectWhichContainsWithCamera()
+         {
+           var characterName =  gamePlayPage.CharacterFoundByWhichContainsWithCamera.name;
+           Console.WriteLine("Character item name" + characterName);
+
+           Assert.AreEqual(characterName, "CharacterSlot" );
+
+         }
+
+       
 
 
         [TearDown]
