@@ -326,7 +326,7 @@ namespace alttrashcat_tests_csharp.tests
 
 
 
-            Assert.AreNotEqual(worldPositionCharacter.z, worldPositionCharacterAfterSomeTime.z);
+            Assert.AreNotEqual(worldPositionCharacter.z, worlPositionUpdateObject.z);
          }
 
         [Test]
@@ -376,10 +376,21 @@ namespace alttrashcat_tests_csharp.tests
             AltComponent altComponentForProperties= new AltComponent("UnityEngine.Transform","UnityEngine.CoreModule");
 
             Console.WriteLine("Property  " + gamePlayPage.Character.GetAllProperties(altComponentForProperties)[0].name );
+            Assert.AreEqual(gamePlayPage.Character.GetAllProperties(altComponentForProperties)[0].name, "position" );
+
             Console.WriteLine("Property  " + gamePlayPage.Character.GetAllProperties(altComponentForProperties)[1].name );
+            Assert.AreEqual(gamePlayPage.Character.GetAllProperties(altComponentForProperties)[1].name, "localPosition" );
+
             Console.WriteLine("Property  " + gamePlayPage.Character.GetAllProperties(altComponentForProperties)[2].name );
+            Assert.AreEqual(gamePlayPage.Character.GetAllProperties(altComponentForProperties)[2].name, "eulerAngles" );
+
             Console.WriteLine("Property  " + gamePlayPage.Character.GetAllProperties(altComponentForProperties)[3].name );
+            Assert.AreEqual(gamePlayPage.Character.GetAllProperties(altComponentForProperties)[3].name, "localEulerAngles" );
+
             Console.WriteLine("Property  " + gamePlayPage.Character.GetAllProperties(altComponentForProperties)[4].name );
+             Assert.AreEqual(gamePlayPage.Character.GetAllProperties(altComponentForProperties)[4].name, "right" );
+
+
          }
         
         [Test]
@@ -414,6 +425,8 @@ namespace alttrashcat_tests_csharp.tests
             Console.WriteLine("Field   " + gamePlayPage.Character.GetAllFields(altComponentForFields)[2].name );
             Console.WriteLine("Field   " + gamePlayPage.Character.GetAllFields(altComponentForFields)[3].name );
             Console.WriteLine("Field   " + gamePlayPage.Character.GetAllFields(altComponentForFields)[4].name );
+
+            Assert.AreEqual(gamePlayPage.Character.GetAllFields(altComponentForFields).Count, 7);
          }
         
 

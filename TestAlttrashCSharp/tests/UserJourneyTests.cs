@@ -227,6 +227,36 @@ namespace alttrashcat_tests_csharp.tests
             var FishbonesPath = altDriver.FindObjects(By.PATH, "//Pickup(Clone)");
             Assert.AreEqual(FishbonesName.Count, FishbonesPath.Count);
 
+
+        }
+
+        [Test]
+        public void TestMEthodsThatHandleScenes()
+        {
+            System.Collections.Generic.List<string> loadedSceneNames = altDriver.GetAllLoadedScenes();
+            Console.WriteLine("Numer of loaded scenes "+ loadedSceneNames.Count);
+            Console.WriteLine("Name of loaded scenes "+ loadedSceneNames[0]);
+            Assert.AreEqual(loadedSceneNames[0], "Main");
+            Assert.AreEqual("Main", altDriver.GetCurrentScene());
+
+            mainMenuPage.PressStore();
+
+            System.Collections.Generic.List<string> loadedSceneNamesAfterStore = altDriver.GetAllLoadedScenes();
+            Console.WriteLine("Numer of loaded scenes "+ loadedSceneNamesAfterStore.Count);
+            Console.WriteLine("Name of loaded scenes "+ loadedSceneNamesAfterStore[0]);
+           Console.WriteLine("Name of loaded scenes "+ loadedSceneNamesAfterStore[1]);
+           Console.WriteLine("Name of current scene "+ altDriver.GetCurrentScene());
+
+           altDriver.UnloadScene("Main");
+           Console.WriteLine("Name of loaded scenes after unloading Main "+ altDriver.GetAllLoadedScenes()[0]);
+              Assert.AreEqual("Shop", altDriver.GetCurrentScene());
+
+           altDriver.LoadScene("Shop");
+           Console.WriteLine("Name of loaded scenes after loading shop "+ altDriver.GetAllLoadedScenes()[0]);
+            Assert.AreEqual("Shop", altDriver.GetCurrentScene());
+
+           Assert.AreEqual(altDriver.GetAllLoadedScenes()[0], "Shop");
+
         }
 
 
