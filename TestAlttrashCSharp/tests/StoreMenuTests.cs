@@ -114,6 +114,45 @@ namespace alttrashcat_tests_csharp.tests
             storePage.CharactersTabPointerEnterExitStateColors();
         }
 
+        [Test]
+
+        public void TestKeyPreferancesInStoreMenu()
+        {
+            altDriver.DeletePlayerPref();
+            altDriver.SetKeyPlayerPref("test", "TestString");
+            var stringVar = altDriver.GetStringKeyPlayerPref("test");
+            Console.WriteLine("Playre pref for string "+ stringVar);
+            Assert.AreEqual(stringVar, "TestString");
+
+            altDriver.SetKeyPlayerPref("test", 1);
+            var intVar = altDriver.GetIntKeyPlayerPref("test");
+            Console.WriteLine("Player pref for int "+ intVar);
+            Assert.AreEqual(intVar, 1);
+
+            altDriver.SetKeyPlayerPref("test", 1.0f);
+            var floatVar = altDriver.GetFloatKeyPlayerPref("test");
+            Console.WriteLine("Player pref for float "+ floatVar);
+            Assert.AreEqual(floatVar, 1.0f);
+
+            altDriver.DeleteKeyPlayerPref("test");
+          
+
+        }
+
+        [Test]
+        public void TestPointerEnterAndExit()
+        {
+            mainMenuPage.LoadScene();
+            mainMenuPage.PressStore();
+            Thread.Sleep(100);
+            storePage.ItemsTab.PointerEnterObject();
+            Assert.IsTrue( storePage.IsPointerOnObject());
+            
+            
+      
+        }
+
+
          [TearDown]
         public void Dispose()
         {

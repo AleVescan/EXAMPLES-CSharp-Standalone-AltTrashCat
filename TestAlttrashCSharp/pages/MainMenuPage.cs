@@ -98,14 +98,7 @@ namespace alttrashcat_tests_csharp.pages
         LeaderboardHighScoreName.SetText("HighScore");
        }
 
-       public void MoveLogoMainPage()
-       {
-        Driver.MoveMouse(new AltVector2(AltUnityLogo.x, AltUnityLogo.y+3000));
-        AltUnityLogo.PointerEnterObject();
-        Driver.MoveMouse(new AltVector2(AltUnityLogo.x+3000, AltUnityLogo.y+3000));
-        AltUnityLogo.PointerExitObject();
-       }
-
+      
     
 
        

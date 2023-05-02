@@ -51,6 +51,7 @@ namespace alttrashcat_tests_csharp.pages
         public AltObject BuyRacoonSafetyButton {get => Driver.FindObjectsWhichContain(By.NAME, "BuyButton")[3] ;}
         public AltObject SardineImage {get => Driver.FindObject(By.PATH, "/Canvas/Background/Premium/Image");}
         public AltObject PremiumButtonAtCoordinates {get=> Driver.FindObjectAtCoordinates(new AltVector2(SardineImage.x - 46, SardineImage.y));}
+        public AltObject EventSystemStore {get => Driver.FindObject(By.NAME, "EventSystem");}
 
        
 
@@ -164,6 +165,13 @@ namespace alttrashcat_tests_csharp.pages
              Console.WriteLine(" After exit button color " +  hoverCharactersTabColor);
 
         }
+
+         public bool IsPointerOnObject()
+       {
+        bool data = EventSystemStore.CallComponentMethod<bool>("UnityEngine.EventSystems.StandaloneInputModule", "IsPointerOverGameObject", "UnityEngine.UI", new object[] { });
+        return data;
+       }
+
 
 
     }

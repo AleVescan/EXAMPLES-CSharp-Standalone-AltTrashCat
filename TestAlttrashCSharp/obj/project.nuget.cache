@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/h0Q8RYOn5lsYpoQF8VnWWCYEmUPtEX5/myIcQv6Aj1oUYCoysGDZq2TncE1r4zEfIhRBeG/Jk4RD8KF+9O7hg==",
+  "dgSpecHash": "SQvPDuJZYFEZbPcwzYUEfBIIQgk9GJShu6+uYIKeiAOkFJ5aW02VI4G83V0Wyyr3WIpnwj8X0i1bDQLOqIENqA==",
   "success": true,
-  "projectFilePath": "C:\\GitProjects\\FORK-CSharp-AltTrashCat\\EXAMPLES-CSharp-Standalone-AltTrashCat\\TestAlttrashCSharp\\TestAlttrashCSharp.csproj",
+  "projectFilePath": "c:\\GitProjects\\FORK-CSharp-AltTrashCat\\EXAMPLES-CSharp-Standalone-AltTrashCat\\TestAlttrashCSharp\\TestAlttrashCSharp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alexandra.vescan\\.nuget\\packages\\allure.commons\\3.5.0.73\\allure.commons.3.5.0.73.nupkg.sha512",
     "C:\\Users\\alexandra.vescan\\.nuget\\packages\\alttester-driver\\1.8.2\\alttester-driver.1.8.2.nupkg.sha512",
