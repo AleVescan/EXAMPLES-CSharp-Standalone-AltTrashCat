@@ -138,6 +138,35 @@ namespace alttrashcat_tests_csharp.tests
           
 
         }
+        [Test]
+        public void TestPlayerPrefsWithStaticMethod()
+        {
+             altDriver.CallStaticMethod<string>("UnityEngine.PlayerPrefs", "SetInt", "UnityEngine.CoreModule", new[] { "Test", "1" });
+             //int a = altDriver.CallStaticMethod<int>("UnityEngine.PlayerPrefs", "GetInt", "UnityEngine.CoreModule", new[] { "Test", "2" });
+             int a = altDriver.GetIntKeyPlayerPref("Test");
+             Assert.AreEqual(1, a);
+        }
+
+        [Test]
+
+        public void TestGetStaticPropertyBrightness()
+        {
+         float brightness = altDriver.GetStaticProperty<float>("UnityEngine.Screen", "brightness","UnityEngine.CoreModule" ); 
+         Console.WriteLine("Brightness is " + brightness); 
+         Assert.AreEqual(brightness, 1);
+        }
+
+        [Test]
+        public void TestSetStaticPropertyScreenBrightness()
+
+        {   
+            float brightness = altDriver.GetStaticProperty<float>("UnityEngine.Screen", "brightness","UnityEngine.CoreModule" ); 
+            object expectedValue = 0.1f; 
+            altDriver.SetStaticProperty("UnityEngine.Screen", "brightness", "UnityEngine.CoreModule", expectedValue);
+            float brightnessUpdated = altDriver.GetStaticProperty<float>("UnityEngine.Screen", "brightness","UnityEngine.CoreModule" ); 
+            Console.WriteLine ("brightness is " + brightness );
+
+        }
 
         [Test]
         public void TestPointerEnterAndExit()
@@ -146,7 +175,7 @@ namespace alttrashcat_tests_csharp.tests
             mainMenuPage.PressStore();
             Thread.Sleep(100);
             storePage.ItemsTab.PointerEnterObject();
-            Assert.IsTrue( storePage.IsPointerOnObject());
+           Assert.IsTrue( storePage.IsPointerOnObject());
             
             
       

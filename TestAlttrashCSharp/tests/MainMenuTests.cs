@@ -240,6 +240,37 @@ namespace alttrashcat_tests_csharp.tests
             Assert.AreEqual("Loadout", altObjectParent.name);
         }
 
+        [Test]
+
+        public void TestGetAppScreenSize()
+        {
+            mainMenuPage.LoadScene();
+            altDriver.CallStaticMethod<string>("UnityEngine.Screen", "SetResolution", "UnityEngine.CoreModule", new string[] { "375", "667", "true" }, new string[] { "System.Int32", "System.Int32", "System.Boolean" });
+            var screensize = altDriver.GetApplicationScreenSize();
+            Console.WriteLine("screensize resolution X " + screensize.x + " screensize resolution Y " + screensize.y);
+            Assert.AreEqual(screensize.x, 375);
+            Assert.AreEqual(screensize.y, 667);
+            
+        }
+
+        [Test]
+
+        public void TestGetTimeScaleinGame()
+        {
+             var timeScaleFromGame = altDriver.GetTimeScale();
+             //Console.WriteLine ("timescale is " + timeScaleFromGame);
+             altDriver.SetTimeScale(0.1f);
+             mainMenuPage.PressRun();
+             Thread.Sleep(1000);
+             Assert.AreEqual(0.1f,altDriver.GetTimeScale() );
+            Thread.Sleep(1000);
+             altDriver.SetTimeScale(1);
+
+        }
+
+        [Test]
+
+     
 
         
 

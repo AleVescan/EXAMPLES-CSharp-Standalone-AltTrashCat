@@ -168,7 +168,7 @@ namespace alttrashcat_tests_csharp.pages
 
          public bool IsPointerOnObject()
        {
-        bool data = EventSystemStore.CallComponentMethod<bool>("UnityEngine.EventSystems.StandaloneInputModule", "IsPointerOverGameObject", "UnityEngine.UI", new object[] { });
+        bool data = Driver.CallStaticMethod<bool>("UnityEngine.EventSystems.StandaloneInputModule", "IsPointerOverGameObject", "UnityEngine.UI", new object[] { });
         return data;
        }
 
