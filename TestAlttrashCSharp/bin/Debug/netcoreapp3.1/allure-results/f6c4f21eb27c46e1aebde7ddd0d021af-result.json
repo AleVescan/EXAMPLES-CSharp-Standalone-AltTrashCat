@@ -1,0 +1,77 @@
+{
+  "uuid": "560e4faa-42f2-4e83-8bf9-1f705001275c-tr-0-1003",
+  "historyId": "alttrashcat_tests_csharp.tests.GamePlayTests.TestGameCanBePausedAndStopped",
+  "fullName": "alttrashcat_tests_csharp.tests.GamePlayTests.TestGameCanBePausedAndStopped",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "ALTOM-PC68"
+    },
+    {
+      "name": "package",
+      "value": "alttrashcat_tests_csharp.tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestGameCanBePausedAndStopped"
+    },
+    {
+      "name": "testClass",
+      "value": "GamePlayTests"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "owner",
+      "value": "AleV"
+    },
+    {
+      "name": "suite",
+      "value": "Gameplay"
+    }
+  ],
+  "links": [],
+  "name": "TestGameCanBePausedAndStopped",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "TestGameCanBePausedAndStopped"
+  },
+  "stage": "finished",
+  "description": "Test to see if the gameplay can be paused and then stopped",
+  "steps": [
+    {
+      "name": "TestGameCanBePausedAndStopped",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "1b7840b76054411bac3337396a04e3ea-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1684305400041,
+      "stop": 1684305401596
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1684305400041,
+  "stop": 1684305401596
+}

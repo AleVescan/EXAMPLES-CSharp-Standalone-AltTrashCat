@@ -259,6 +259,13 @@ namespace alttrashcat_tests_csharp.tests
 
         }
 
+        [Test]
+        // public void TestWaitForCurrentScene()
+        // {
+        //    const string name = "Shop";
+        //   // string currentScene = altDriver.WaitForCurrentSceneToBe(name);
+        // }
+
 
 
         [TearDown]

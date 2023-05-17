@@ -1,0 +1,68 @@
+{
+  "uuid": "955238ee-7a42-4ba0-a6ca-641f7a5a52f2-tr-0-1042",
+  "historyId": "alttrashcat_tests_csharp.tests.StoreMenuTests.TestBuyMagnetCanBeSetInteractableWithoutEnoughCoins",
+  "fullName": "alttrashcat_tests_csharp.tests.StoreMenuTests.TestBuyMagnetCanBeSetInteractableWithoutEnoughCoins",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "ALTOM-PC68"
+    },
+    {
+      "name": "package",
+      "value": "alttrashcat_tests_csharp.tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestBuyMagnetCanBeSetInteractableWithoutEnoughCoins"
+    },
+    {
+      "name": "testClass",
+      "value": "StoreMenuTests"
+    },
+    {
+      "name": "suite",
+      "value": "Store"
+    }
+  ],
+  "links": [],
+  "name": "TestBuyMagnetCanBeSetInteractableWithoutEnoughCoins",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "TestBuyMagnetCanBeSetInteractableWithoutEnoughCoins"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "TestBuyMagnetCanBeSetInteractableWithoutEnoughCoins",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "14f14af819ec47c5994b4d7e6199d0d8-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1684307518891,
+      "stop": 1684307522779
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1684307518891,
+  "stop": 1684307522779
+}

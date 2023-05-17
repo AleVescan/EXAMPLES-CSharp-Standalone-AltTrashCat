@@ -1,0 +1,68 @@
+{
+  "uuid": "38308e74-8bf0-439b-83b2-c9c9a2876aa4-tr-0-1046",
+  "historyId": "alttrashcat_tests_csharp.tests.StoreMenuTests.TestPlayerPrefsWithStaticMethod",
+  "fullName": "alttrashcat_tests_csharp.tests.StoreMenuTests.TestPlayerPrefsWithStaticMethod",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "ALTOM-PC68"
+    },
+    {
+      "name": "package",
+      "value": "alttrashcat_tests_csharp.tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestPlayerPrefsWithStaticMethod"
+    },
+    {
+      "name": "testClass",
+      "value": "StoreMenuTests"
+    },
+    {
+      "name": "suite",
+      "value": "Store"
+    }
+  ],
+  "links": [],
+  "name": "TestPlayerPrefsWithStaticMethod",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "TestPlayerPrefsWithStaticMethod"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "TestPlayerPrefsWithStaticMethod",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "cb94ec95f39f426982f1a50dcabdeaa2-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1684305627333,
+      "stop": 1684305628442
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1684305627333,
+  "stop": 1684305628443
+}

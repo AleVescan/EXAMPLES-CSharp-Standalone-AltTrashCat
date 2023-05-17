@@ -1,0 +1,73 @@
+{
+  "uuid": "b3404d32-6643-4af1-82f9-c8738ea2ed71-tr-0-1020",
+  "historyId": "alttrashcat_tests_csharp.tests.MainMenuTests.TestDeleteData",
+  "fullName": "alttrashcat_tests_csharp.tests.MainMenuTests.TestDeleteData",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "ALTOM-PC68"
+    },
+    {
+      "name": "package",
+      "value": "alttrashcat_tests_csharp.tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestDeleteData"
+    },
+    {
+      "name": "testClass",
+      "value": "MainMenuTests"
+    },
+    {
+      "name": "severity",
+      "value": "normal"
+    },
+    {
+      "name": "owner",
+      "value": "AleV"
+    }
+  ],
+  "links": [],
+  "name": "TestDeleteData",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "TestDeleteData"
+  },
+  "stage": "finished",
+  "description": "Resets the game data",
+  "steps": [
+    {
+      "name": "TestDeleteData",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "393a37f54e5940c4bc7a0043b8a697c0-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1684305575141,
+      "stop": 1684305576833
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1684305575141,
+  "stop": 1684305576833
+}

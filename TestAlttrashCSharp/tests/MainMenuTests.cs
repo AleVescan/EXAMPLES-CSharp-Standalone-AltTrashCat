@@ -253,6 +253,22 @@ namespace alttrashcat_tests_csharp.tests
             
         }
 
+        // [Test] This fails due to SetStaticPropertyIssue 
+
+        // public void TestSetStaticCameraCount()
+        // {
+        //     var numberOfCameras = altDriver.GetStaticProperty<int>("UnityEngine.Camera", "allCamerasCount", "UnityEngine.CoreModule" );
+        //     Console.WriteLine("Number of cameras is "+ numberOfCameras);
+
+        //     var firstCamera = altDriver.GetStaticProperty<object>("UnityEngine.Camera", "allCameras", "UnityEngine.CoreModule");
+        //     altDriver.SetStaticProperty("UnityEngine.Camera", "allCameras", "UnityEngine.CoreModule", firstCamera);
+
+        //     altDriver.SetStaticProperty("UnityEngine.Camera", "allCamerasCount", "UnityEngine.CoreModule", 5);
+        //    var updatedNumberOfCameras = altDriver.GetStaticProperty<int>("UnityEngine.Camera", "allCamerasCount", "UnityEngine.CoreModule" );
+        //      Console.WriteLine("Updated number of cameras is "+ updatedNumberOfCameras);
+
+        // }
+
         [Test]
 
         public void TestGetTimeScaleinGame()

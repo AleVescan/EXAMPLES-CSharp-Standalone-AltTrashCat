@@ -1,0 +1,64 @@
+{
+  "uuid": "0eebe113-c409-4386-ac57-887c095cb647-tr-0-1052",
+  "historyId": "alttrashcat_tests_csharp.tests.UserJourneyTests.TestTheNumberOfAllEnabledElementsFromDifferentPagesIsDifferent",
+  "fullName": "alttrashcat_tests_csharp.tests.UserJourneyTests.TestTheNumberOfAllEnabledElementsFromDifferentPagesIsDifferent",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "ALTOM-PC68"
+    },
+    {
+      "name": "package",
+      "value": "alttrashcat_tests_csharp.tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestTheNumberOfAllEnabledElementsFromDifferentPagesIsDifferent"
+    },
+    {
+      "name": "testClass",
+      "value": "UserJourneyTests"
+    }
+  ],
+  "links": [],
+  "name": "TestTheNumberOfAllEnabledElementsFromDifferentPagesIsDifferent",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "TestTheNumberOfAllEnabledElementsFromDifferentPagesIsDifferent"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "TestTheNumberOfAllEnabledElementsFromDifferentPagesIsDifferent",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "df1649bd1d7142b49752bcb12c3de8e1-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1684305640686,
+      "stop": 1684305642978
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1684305640686,
+  "stop": 1684305642978
+}

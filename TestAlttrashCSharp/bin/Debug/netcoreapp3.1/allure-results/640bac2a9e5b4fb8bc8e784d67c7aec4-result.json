@@ -1,0 +1,73 @@
+{
+  "uuid": "c81d7cbd-d3ba-4662-a9ca-aa6810d977b4-tr-0-1049",
+  "historyId": "alttrashcat_tests_csharp.tests.UserJourneyTests.UserJourneyPlayandPause",
+  "fullName": "alttrashcat_tests_csharp.tests.UserJourneyTests.UserJourneyPlayandPause",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "ALTOM-PC68"
+    },
+    {
+      "name": "package",
+      "value": "alttrashcat_tests_csharp.tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "UserJourneyPlayandPause"
+    },
+    {
+      "name": "testClass",
+      "value": "UserJourneyTests"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "owner",
+      "value": "AleV"
+    }
+  ],
+  "links": [],
+  "name": "UserJourneyPlayandPause",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "UserJourneyPlayandPause"
+  },
+  "stage": "finished",
+  "description": "An user journey in which the player starts the game, pauses it, resumes playing until it dies and the game over screen is displayed",
+  "steps": [
+    {
+      "name": "UserJourneyPlayandPause",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "98a6c67b145a45028cee2f61cf75c496-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1684305648099,
+      "stop": 1684305677471
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1684305648099,
+  "stop": 1684305677471
+}

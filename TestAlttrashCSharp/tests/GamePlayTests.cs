@@ -339,12 +339,11 @@ namespace alttrashcat_tests_csharp.tests
             Console.WriteLine("Screen position of character X axis " + screenPositionCharacter.x);
             Console.WriteLine("Screen position of character Y axis " + screenPositionCharacter.y);
 
-
             Thread.Sleep(5000);
-            altDriver.PressKey(AltKeyCode.LeftArrow);
+            //altDriver.PressKey(AltKeyCode.LeftArrow);
+            gamePlayPage.MoveLeft(gamePlayPage.Character);
             Thread.Sleep(1000);
 
-    
             AltVector2 screenPositionCharacteraAfterSomeTime = Character.UpdateObject().GetScreenPosition();
 
             Console.WriteLine("Screen position of character after some time X axis " + screenPositionCharacteraAfterSomeTime.x);

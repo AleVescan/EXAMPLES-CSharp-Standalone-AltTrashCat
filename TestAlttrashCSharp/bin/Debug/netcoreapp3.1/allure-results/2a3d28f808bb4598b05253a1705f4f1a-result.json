@@ -1,0 +1,68 @@
+{
+  "uuid": "081921d1-70be-4112-9f00-9d5bd66fce23-tr-0-1017",
+  "historyId": "alttrashcat_tests_csharp.tests.GamePlayTests.TestFindObjectWhichContainsWithCamera",
+  "fullName": "alttrashcat_tests_csharp.tests.GamePlayTests.TestFindObjectWhichContainsWithCamera",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "ALTOM-PC68"
+    },
+    {
+      "name": "package",
+      "value": "alttrashcat_tests_csharp.tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestFindObjectWhichContainsWithCamera"
+    },
+    {
+      "name": "testClass",
+      "value": "GamePlayTests"
+    },
+    {
+      "name": "suite",
+      "value": "Gameplay"
+    }
+  ],
+  "links": [],
+  "name": "TestFindObjectWhichContainsWithCamera",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "TestFindObjectWhichContainsWithCamera"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "TestFindObjectWhichContainsWithCamera",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "1196dc0c3f1a4731939c8b1a039d6e0a-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1684307290438,
+      "stop": 1684307291757
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1684307290438,
+  "stop": 1684307291757
+}

@@ -1,0 +1,73 @@
+{
+  "uuid": "246f2ff3-cc3e-455b-a53e-cb8da12462b7-tr-0-1026",
+  "historyId": "alttrashcat_tests_csharp.tests.MainMenuTests.TestNightTimeThemeisApplied",
+  "fullName": "alttrashcat_tests_csharp.tests.MainMenuTests.TestNightTimeThemeisApplied",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "ALTOM-PC68"
+    },
+    {
+      "name": "package",
+      "value": "alttrashcat_tests_csharp.tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestNightTimeThemeisApplied"
+    },
+    {
+      "name": "testClass",
+      "value": "MainMenuTests"
+    },
+    {
+      "name": "severity",
+      "value": "minor"
+    },
+    {
+      "name": "owner",
+      "value": "AleV"
+    }
+  ],
+  "links": [],
+  "name": "TestNightTimeThemeisApplied",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "TestNightTimeThemeisApplied"
+  },
+  "stage": "finished",
+  "description": "The player can change the theme of the game",
+  "steps": [
+    {
+      "name": "TestNightTimeThemeisApplied",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "22f693456e71479b908efa7bb51d60bb-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1684305587393,
+      "stop": 1684305589520
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1684305587393,
+  "stop": 1684305589520
+}

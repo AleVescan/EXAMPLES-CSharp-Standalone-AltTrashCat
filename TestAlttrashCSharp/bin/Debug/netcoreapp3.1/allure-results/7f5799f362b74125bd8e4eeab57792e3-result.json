@@ -1,0 +1,68 @@
+{
+  "uuid": "a4cb519a-c0bc-410e-85de-28bd313b797d-tr-0-1043",
+  "historyId": "alttrashcat_tests_csharp.tests.StoreMenuTests.TestThatPremiumButtonAtCoordinatesIsFound",
+  "fullName": "alttrashcat_tests_csharp.tests.StoreMenuTests.TestThatPremiumButtonAtCoordinatesIsFound",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "ALTOM-PC68"
+    },
+    {
+      "name": "package",
+      "value": "alttrashcat_tests_csharp.tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestThatPremiumButtonAtCoordinatesIsFound"
+    },
+    {
+      "name": "testClass",
+      "value": "StoreMenuTests"
+    },
+    {
+      "name": "suite",
+      "value": "Store"
+    }
+  ],
+  "links": [],
+  "name": "TestThatPremiumButtonAtCoordinatesIsFound",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "TestThatPremiumButtonAtCoordinatesIsFound"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "TestThatPremiumButtonAtCoordinatesIsFound",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "6dd388b7c7de46b39981fca5b00f7e74-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1684305631054,
+      "stop": 1684305632378
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1684305631054,
+  "stop": 1684305632378
+}

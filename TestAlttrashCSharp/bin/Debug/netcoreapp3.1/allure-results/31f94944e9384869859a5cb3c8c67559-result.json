@@ -1,0 +1,68 @@
+{
+  "uuid": "0e016be0-ef24-47a7-a9f4-762b59601ac8-tr-0-1045",
+  "historyId": "alttrashcat_tests_csharp.tests.StoreMenuTests.TestKeyPreferancesInStoreMenu",
+  "fullName": "alttrashcat_tests_csharp.tests.StoreMenuTests.TestKeyPreferancesInStoreMenu",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "ALTOM-PC68"
+    },
+    {
+      "name": "package",
+      "value": "alttrashcat_tests_csharp.tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestKeyPreferancesInStoreMenu"
+    },
+    {
+      "name": "testClass",
+      "value": "StoreMenuTests"
+    },
+    {
+      "name": "suite",
+      "value": "Store"
+    }
+  ],
+  "links": [],
+  "name": "TestKeyPreferancesInStoreMenu",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "TestKeyPreferancesInStoreMenu"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "TestKeyPreferancesInStoreMenu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "7c82cdae2f2d4781a7794ddec27ec926-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1684307527460,
+      "stop": 1684307528698
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1684307527460,
+  "stop": 1684307528698
+}
